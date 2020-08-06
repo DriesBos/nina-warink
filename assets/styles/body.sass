@@ -1,9 +1,28 @@
 @import '~/assets/styles/variables.sass'
 
-section
+.section
   max-width: 100%
   img
     max-width: 100%
+  &-Landing
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    .display
+      h1
+        font-size: 10vw
+  &-Content
+    display: flex
+    justify-content: center
+    align-items: center
+    ul
+      display: flex
+      flex-direction: column
+      width: 60vw
+    li
+      margin-bottom: 20vw
 
 header
   position: relative
