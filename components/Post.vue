@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="pagetype-Page">
+  <div v-editable="blok" class="pagetype-Post">
     <component
       :is="blok.component | dashify"
       v-for="blok in blok.body"
@@ -15,7 +15,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("PAGETYPE PAGE", this.blok)
+    console.log("PAGETYPE POST", this.blok)
   }
 }
 </script>

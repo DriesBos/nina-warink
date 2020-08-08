@@ -1,13 +1,12 @@
 <template>
   <section>
-    <p>Blog List</p>
     <ul>
       <!-- prettier-ignore -->
-      <!-- <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
+      <li v-for="post in blogList" :id="post.id" :key="post.id">
         <nuxt-link :to="post.full_slug" tag="div">
-          <h2>{{ post.content.title }}</h2>
+          <h1>{{ post.name }}</h1>
         </nuxt-link>
-      </li>-->
+      </li>
     </ul>
   </section>
 </template>
@@ -50,7 +49,8 @@ export default {
   },
   mounted() {
     this.removeFirstOfarray()
-    console.log("BLOG", this.stories.content, this.blogList)
+    console.log("BLOG", this.stories, this.blogList)
+    console.log("BLOGTITLE", this.blogList[0].content.body[0].title)
   },
   destroyed() {},
   methods: {
