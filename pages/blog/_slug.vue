@@ -1,9 +1,12 @@
 <template>
-  <div v-editable="story.content" class="blog-post">
-    <h1>{{ story.content.title }}</h1>
-    <p>{{ story.content.excerpt }}</p>
-    <img :src="story.content.cover_image.filename" alt="" />
-  </div>
+  <section v-editable="story.content">
+    <component
+      :is="story.content.component | dashify"
+      v-if="story.content.component"
+      :key="story.content._uid"
+      :blok="story.content"
+    ></component>
+  </section>
 </template>
 
 <script>
@@ -42,7 +45,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.story.content)
+    console.log("BLOG SINGLE", this.story.content)
   }
 }
 </script>

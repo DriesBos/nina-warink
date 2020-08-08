@@ -3,11 +3,11 @@
     <p>Blog List</p>
     <ul>
       <!-- prettier-ignore -->
-      <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
+      <!-- <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
         <nuxt-link :to="post.full_slug" tag="div">
           <h2>{{ post.content.title }}</h2>
         </nuxt-link>
-      </li>
+      </li>-->
     </ul>
   </section>
 </template>
@@ -44,7 +44,20 @@ export default {
   },
   data() {
     return {
-      stories: { content: {} }
+      stories: { content: {} },
+      blogList: {}
+    }
+  },
+  mounted() {
+    console.log("BLOG", this.stories.content, this.blogList)
+    this.removeFirstOfarray()
+  },
+  destroyed() {},
+  methods: {
+    removeFirstOfarray() {
+      var arr = this.stories
+      arr.shift()
+      this.blogList = arr
     }
   }
 }
