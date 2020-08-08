@@ -30,8 +30,7 @@ header
     display: flex
     justify-content: flex-end
     li
-      padding-top: 2em
-      margin-bottom: 2rem
+      padding-top: 1.25em
       margin-right: 1.25em
       cursor: pointer
     li:last-child
