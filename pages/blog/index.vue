@@ -1,14 +1,16 @@
 <template>
-  <section>
-    <ul>
-      <!-- prettier-ignore -->
-      <li v-for="post in blogList" :id="post.id" :key="post.id">
-        <nuxt-link :to="post.full_slug" tag="div">
-          <h1>{{ post.name }}</h1>
-        </nuxt-link>
-      </li>
-    </ul>
-  </section>
+  <div class="page">
+    <section>
+      <ul>
+        <!-- prettier-ignore -->
+        <li v-for="post in blogList" :id="post.id" :key="post.id">
+          <nuxt-link :to="post.full_slug" tag="div">
+            <h1>{{ post.name }}</h1>
+          </nuxt-link>
+        </li>
+      </ul>
+    </section>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <section class="section section-Animation">
       <div id="object"></div>
       <svg
