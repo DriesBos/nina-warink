@@ -49,8 +49,8 @@ export default {
     }
   },
   mounted() {
-    console.log("BLOG", this.stories.content, this.blogList)
     this.removeFirstOfarray()
+    console.log("BLOG", this.stories.content, this.blogList)
   },
   destroyed() {},
   methods: {
