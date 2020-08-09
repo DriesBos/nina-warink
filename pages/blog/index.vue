@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <section>
+    <section class="section">
       <ul>
         <!-- prettier-ignore -->
         <li v-for="post in blogList" :id="post.id" :key="post.id">
