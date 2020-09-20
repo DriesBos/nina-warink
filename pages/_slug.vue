@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="story.content" class="page page-Slug">
+  <div v-editable="story.content" class="page page-IndexSlug">
     <component
       :is="story.content.component | dashify"
       v-if="story.content.component"

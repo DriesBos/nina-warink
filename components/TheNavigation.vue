@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 header
   position: fixed
   top: 0
@@ -37,5 +39,5 @@ header
       padding-right: 0
   .nuxt-link-exact-active
     text-decoration: none
-    border-bottom: 1px solid white
+    border-bottom: $border
 </style>

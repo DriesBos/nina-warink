@@ -1,13 +1,11 @@
 <template>
-  <div v-editable="story.content" class="section-Wrapper">
-    <section v-editable="story.content">
-      <component
-        :is="story.content.component | dashify"
-        v-if="story.content.component"
-        :key="story.content._uid"
-        :blok="story.content"
-      ></component>
-    </section>
+  <div v-editable="story.content" class="page page-Samenwerken">
+    <component
+      :is="story.content.component | dashify"
+      v-if="story.content.component"
+      :key="story.content._uid"
+      :blok="story.content"
+    ></component>
   </div>
 </template>
 

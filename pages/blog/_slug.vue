@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="section-Wrapper">
+  <div v-editable="story.content" class="page-BlogSlug section-Wrapper">
     <component
       :is="blok.component | dashify"
       v-for="blok in story.content.body"
