@@ -37,7 +37,12 @@ header
       cursor: pointer
     li:last-child
       padding-right: 0
-  .nuxt-link-exact-active
-    text-decoration: none
-    border-bottom: $border
+    li:first-child
+      &.nuxt-link-exact-active
+        text-decoration: none
+        border-bottom: $border
+    li:nth-child(n+2)
+      &.nuxt-link-active
+        text-decoration: none
+        border-bottom: $border
 </style>
