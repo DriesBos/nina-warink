@@ -32,22 +32,30 @@
     </ul>
     <ul class="footer-Social">
       <li>
-        <div
-          class="icon"
-          v-html="require('~/assets/images/icon-instagram.svg?include')"
-        />
-        <div
-          class="icon"
-          v-html="require('~/assets/images/icon-facebook.svg?include')"
-        />
-        <div
-          class="icon"
-          v-html="require('~/assets/images/icon-twitter.svg?include')"
-        />
-        <div
-          class="icon"
-          v-html="require('~/assets/images/icon-youtube.svg?include')"
-        />
+        <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+          <div
+            class="icon"
+            v-html="require('~/assets/images/icon-instagram.svg?include')"
+          />
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <div
+            class="icon"
+            v-html="require('~/assets/images/icon-facebook.svg?include')"
+          />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
+          <div
+            class="icon"
+            v-html="require('~/assets/images/icon-twitter.svg?include')"
+          />
+        </a>
+        <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+          <div
+            class="icon"
+            v-html="require('~/assets/images/icon-youtube.svg?include')"
+          />
+        </a>
       </li>
     </ul>
   </footer>
