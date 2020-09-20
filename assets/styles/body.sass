@@ -5,6 +5,14 @@ body
   background-color: #C0C9E5
   transition: background-color .33s ease-in
 
+main
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-left: var(--spacing-sides)
+  padding-right: var(--spacing-sides)
+  padding-bottom: var(--spacing-three)
+
 .page
   display: flex
   flex-direction: column
@@ -12,8 +20,7 @@ body
   justify-content: space-around
   .section
     max-width: 960px
-    margin-bottom: 20vw
-    // background: blue
+    margin-bottom: var(--spacing-five)
     &:first-child
       margin-top: 45vw
     img
@@ -59,9 +66,8 @@ body
       ul
         display: flex
         flex-direction: column
-        width: 60vw
-      li
-        margin-bottom: 20vw
+        width: 100%
+        max-width: $max-content-width
 
 .blog-post
   padding-left: 1em

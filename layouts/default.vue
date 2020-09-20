@@ -4,15 +4,18 @@
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
+    <the-footer />
   </main>
 </template>
 
 <script>
 import TheNavigation from "~/components/TheNavigation.vue"
+import TheFooter from "~/components/TheFooter.vue"
 
 export default {
   components: {
-    "the-navigation": TheNavigation
+    "the-navigation": TheNavigation,
+    "the-footer": TheFooter
   },
   data() {
     return {

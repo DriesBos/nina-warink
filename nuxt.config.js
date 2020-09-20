@@ -42,15 +42,6 @@ module.exports = {
   loading: false,
 
   /*
-   ** Scroll behaviour (depreciated but new method seems buggy (app folder))
-   */
-  router: {
-    scrollBehavior: function() {
-      return { x: 0, y: 0 }
-    }
-  },
-
-  /*
    ** Global CSS
    */
   css: [
@@ -72,10 +63,6 @@ module.exports = {
   modules: [
     "@nuxtjs/axios",
     "vue-scrollto/nuxt",
-    [
-      "@bazzite/nuxt-optimized-images",
-      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } } // Test compression by setting to true first
-    ],
     [
       "storyblok-nuxt",
       {
@@ -147,7 +134,15 @@ module.exports = {
     transpile: ["gsap"]
   },
   buildModules: [
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    [
+      "@aceforth/nuxt-optimized-images",
+      {
+        optimizedImages: {
+          optimizeImages: true
+        }
+      }
+    ]
     // [
     //   "@nuxtjs/google-analytics",
     //   {

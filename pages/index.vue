@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page page-Index">
     <!-- <div id="object"></div> -->
     <!-- <svg
         id="path"

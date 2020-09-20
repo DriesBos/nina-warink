@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page page-Slug">
     <section v-editable="story.content">
       <component
         :is="story.content.component | dashify"
