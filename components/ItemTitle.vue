@@ -1,15 +1,15 @@
 <template>
   <div class="subSection subSection-Title title">
-    <markdown :input="blok.text" />
+    <markdown-item :input="blok.text" />
   </div>
 </template>
 
 <script>
-import ItemMarkDown from "~/components/ItemMarkDown.vue"
+import MarkdownItem from "@/components/MarkdownItem.vue"
 
 export default {
   components: {
-    markdown: ItemMarkDown
+    "markdown-item": MarkdownItem
   },
   props: {
     blok: Object
