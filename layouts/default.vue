@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     changeBackground() {
-      console.log("ROUTE", this.$route)
       if (this.$route.name === "index") {
         document.body.style.backgroundColor = "#C0C9E5"
       } else if (this.$route.name === "blog") {

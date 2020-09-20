@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="story.content" class="page page-Slug">
+  <div v-editable="story.content" class="section-Wrapper">
     <component
       :is="story.content.component | dashify"
       v-if="story.content.component"
@@ -14,7 +14,7 @@ export default {
   asyncData(context) {
     // Load the JSON from the API
     return context.app.$storyapi
-      .get(`cdn/stories/${context.params.slug}`, {
+      .get(`cdn/stories/blog`, {
         version: process.env.NODE_ENV == "production" ? "published" : "draft"
       })
       .then(res => {
@@ -31,7 +31,7 @@ export default {
     return { story: { content: {} } }
   },
   mounted() {
-    console.log("PAGETYPE SLUG", this.story)
+    console.log("BLOG INDEX", this.story)
   }
 }
 </script>
