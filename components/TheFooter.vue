@@ -2,32 +2,36 @@
   <footer class="footer">
     <ul>
       <li>
-        <nuxt-link to="/">Nina Warink</nuxt-link>
+        <nuxt-link class="footer-Link nonActive" to="/">Nina Warink</nuxt-link>
       </li>
     </ul>
     <ul>
       <li>
-        <nuxt-link to="/">Home</nuxt-link>
+        <nuxt-link class="footer-Link" to="/">Home</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/blog">Blog</nuxt-link>
+        <nuxt-link class="footer-Link" to="/blog">Blog</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/samenwerken">Samenwerken</nuxt-link>
+        <nuxt-link class="footer-Link" to="/samenwerken">Samenwerken</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/contact">Contact</nuxt-link>
+        <nuxt-link class="footer-Link" to="/contact">Contact</nuxt-link>
       </li>
     </ul>
     <ul>
       <li>
-        <nuxt-link to="/">FAQ</nuxt-link>
+        <nuxt-link class="footer-Link nonActive" to="/">FAQ</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/">Terms & Conditions</nuxt-link>
+        <nuxt-link class="footer-Link nonActive" to="/"
+          >Terms & Conditions</nuxt-link
+        >
       </li>
       <li>
-        <nuxt-link to="/">Privacy Policy</nuxt-link>
+        <nuxt-link class="footer-Link nonActive" to="/"
+          >Privacy Policy</nuxt-link
+        >
       </li>
     </ul>
     <ul class="footer-Social">
@@ -91,4 +95,13 @@
           width: 100%
           height: 100%
           object-fit: contain
+  &-Link
+    &.nuxt-link-exact-active
+      text-decoration: underline
+    &.nonActive.nuxt-link-exact-active
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+    &:hover
+      text-decoration: underline
 </style>
