@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="section section-Wrapper">
+  <div id="pageComponent" v-editable="blok" class="section section-Wrapper">
     <component
       :is="blok.component | dashify"
       v-for="blok in blok.body"
