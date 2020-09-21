@@ -23,7 +23,7 @@ export default {
             align-items: center
             min-height: 100vh
         &.small
-            margin-bottom: var(--spacing-three)
+            margin-bottom: var(--spacing-two)
         &.medium
             margin-bottom: var(--spacing-five)
 </style>
