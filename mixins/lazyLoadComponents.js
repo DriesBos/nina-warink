@@ -24,7 +24,7 @@ export default {
           {
             opacity: 1,
             // y: 0,
-            duration: 0.66,
+            duration: 0.33,
             ease: "power2.in"
           },
           0
@@ -33,7 +33,7 @@ export default {
           el,
           {
             y: 0,
-            duration: 0.66,
+            duration: 0.33,
             ease: "power2.out"
           },
           0
