@@ -11,6 +11,8 @@
 
 <script>
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
@@ -18,7 +20,7 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin"
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 
 export default {
-  mixins: [storyblokLivePreview],
+  mixins: [storyblokLivePreview, lazyLoadComponents],
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories/home", {
@@ -50,7 +52,7 @@ export default {
   },
   mounted() {
     this.pathAnimation()
-    console.log("PAGETYPE INDEX", this.story)
+    // console.log("PAGETYPE INDEX", this.story)
   },
   methods: {
     pathAnimation() {

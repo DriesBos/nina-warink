@@ -9,14 +9,10 @@
 </template>
 
 <script>
-import TheNavigation from "~/components/TheNavigation.vue"
-import TheFooter from "~/components/TheFooter.vue"
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
 
 export default {
-  components: {
-    "the-navigation": TheNavigation,
-    "the-footer": TheFooter
-  },
+  mixins: [lazyLoadComponents],
   data() {
     return {
       backgroundColor: 0
@@ -32,7 +28,6 @@ export default {
   },
   methods: {
     changeBackground() {
-      console.log(this.$route)
       if (this.$route.name === "index") {
         document.body.style.backgroundColor = "#C0C9E5"
       } else if (

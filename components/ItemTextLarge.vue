@@ -10,7 +10,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("ITEM TEXTLARGE", this.blok)
+    // console.log("ITEM TEXTLARGE", this.blok)
   }
 }
 </script>

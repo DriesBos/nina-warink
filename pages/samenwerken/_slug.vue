@@ -10,7 +10,10 @@
 </template>
 
 <script>
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+
 export default {
+  mixins: [lazyLoadComponents],
   scrollToTop: true,
   asyncData(context) {
     let endpoint = `cdn/stories/samenwerken/${context.params.slug}`
@@ -46,7 +49,7 @@ export default {
     }
   },
   mounted() {
-    console.log("PAGE SAMENWERKEN", this.story)
+    // console.log("PAGE SAMENWERKEN", this.story)
   }
 }
 </script>

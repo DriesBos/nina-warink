@@ -10,7 +10,10 @@
 </template>
 
 <script>
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+
 export default {
+  mixins: [lazyLoadComponents],
   asyncData(context) {
     // Load the JSON from the API
     return context.app.$storyapi
@@ -31,7 +34,7 @@ export default {
     return { story: { content: {} } }
   },
   mounted() {
-    console.log("SAMENWERKEN INDEX", this.story)
+    // console.log("SAMENWERKEN INDEX", this.story)
   }
 }
 </script>

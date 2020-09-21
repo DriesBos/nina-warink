@@ -19,7 +19,7 @@ export default {
   },
   mounted() {
     this.applyRatio()
-    console.log("ITEM IMAGES", this.blok)
+    // console.log("ITEM IMAGES", this.blok)
   },
   methods: {
     applyRatio() {
