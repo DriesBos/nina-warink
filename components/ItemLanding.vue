@@ -1,5 +1,8 @@
 <template>
-  <section class="section section-Landing" :class="blok.title_bottom_padding">
+  <section
+    class="section subSection section-Landing title"
+    :class="blok.title_bottom_padding"
+  >
     <h1>{{ blok.title }}</h1>
   </section>
 </template>
