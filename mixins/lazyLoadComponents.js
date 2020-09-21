@@ -19,12 +19,25 @@ export default {
             start: "center bottom"
           }
         })
-        lazyTimeline.to(el, {
-          opacity: 1,
-          // y: 0,
-          duration: 0.66,
-          ease: "ease"
-        })
+        lazyTimeline.to(
+          el,
+          {
+            opacity: 1,
+            // y: 0,
+            duration: 0.66,
+            ease: "power2.in"
+          },
+          0
+        )
+        lazyTimeline.to(
+          el,
+          {
+            y: 0,
+            duration: 0.66,
+            ease: "power2.out"
+          },
+          0
+        )
       })
     }
   }
