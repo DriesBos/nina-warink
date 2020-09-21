@@ -6,8 +6,16 @@
     <div class="logo">
       <div v-html="require('~/assets/images/logo.svg?include')" />
     </div>
-    <div id="heart-one" class="heart">
-      <div class="icon" v-html="require('~/assets/images/heart.svg?include')" />
+    <div class="animation">
+      <div class="path">
+        <div v-html="require('~/assets/images/path.svg?include')" />
+      </div>
+      <div id="heart" class="heart">
+        <div
+          class="icon"
+          v-html="require('~/assets/images/heart.svg?include')"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -30,11 +38,21 @@ export default {
   },
   methods: {
     pathAnimation() {
-      gsap.to("#heart-one", {
-        duration: 10,
-        motionPath:
-          "M 100 300 Q 150 50 200 300 Q 250 550 300 300 Q 350 50 400 300 C 450 550 450 50 500 300 C 550 50 550 550 600 300 A 50 50 0 1 1 700 300"
+      var path = document.querySelector("#path")
+      var heart = document.querySelector("#heart")
+      gsap.set(heart, {
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "50% 50%"
       })
+      gsap.to(heart, {
+        duration: 10,
+        motionPath: {
+          path: "#path",
+          align: "#path"
+        }
+      })
+      console.log("ANIMATION", path)
     }
   }
 }
@@ -51,15 +69,20 @@ export default {
         .logo
             width: 100%
             height: auto
-        .heart
+        .animation
             position: fixed
             left: 0
             top: 0
             right: 0
             bottom: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                width: 100vw
+                height: auto
+        .heart
             svg
                 height: 39px
                 width: auto
-            // width: 100px
-            // height: 100px
 </style>
