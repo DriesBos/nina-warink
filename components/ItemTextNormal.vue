@@ -5,12 +5,7 @@
 </template>
 
 <script>
-import MarkdownItem from "@/components/MarkdownItem.vue"
-
 export default {
-  components: {
-    "markdown-item": MarkdownItem
-  },
   props: {
     blok: Object
   },
