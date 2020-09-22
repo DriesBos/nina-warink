@@ -32,9 +32,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("ITEM MAINLANDING", this.blok)
     this.pathAnimation()
-    // console.log("PAGETYPE INDEX", this.story)
   },
   methods: {
     pathAnimation() {
@@ -59,7 +57,6 @@ export default {
           end: "bottom bottom"
         }
       })
-      console.log("ANIMATION", path, heart)
     }
   }
 }

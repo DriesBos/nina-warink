@@ -13,12 +13,6 @@
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
 
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { MotionPathPlugin } from "gsap/MotionPathPlugin"
-
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
-
 export default {
   mixins: [storyblokLivePreview, lazyLoadComponents],
   asyncData(context) {
@@ -48,34 +42,6 @@ export default {
   data() {
     return {
       story: { content: {} }
-    }
-  },
-  mounted() {
-    this.pathAnimation()
-    // console.log("PAGETYPE INDEX", this.story)
-  },
-  methods: {
-    pathAnimation() {
-      // Center
-      gsap.set("#object", {
-        xPercent: -50,
-        yPercent: -50,
-        transformOrigin: "50% 50%"
-      })
-      // Animation
-      gsap.to("#object", {
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".section-Animation",
-          scrub: true
-        },
-        motionPath: {
-          path: "#path",
-          align: "#path",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true
-        }
-      })
     }
   }
 }
