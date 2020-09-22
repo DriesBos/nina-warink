@@ -4,16 +4,8 @@
     :class="blok.title_bottom_padding"
   >
     <div class="logo">
-      <div v-html="require('~/assets/images/logo.svg?include')" />
+      <div v-html="require('~/assets/images/logo-new.svg?include')" />
     </div>
-    <div class="path animation">
-      <div v-html="require('~/assets/images/path.svg?include')" />
-    </div>
-    <div
-      id="heart"
-      class="heart icon"
-      v-html="require('~/assets/images/heart.svg?include')"
-    />
   </section>
 </template>
 
@@ -29,20 +21,33 @@ export default {
     blok: Object
   },
   mounted() {
+    // this.initPath()
     this.pathAnimation()
   },
   methods: {
+    initPath() {
+      // Get #logo width
+      let logo = document.querySelector("#logo")
+      let logoRect = logo.getBoundingClientRect()
+      let width = Math.round(logoRect.width)
+      // Get window height
+      let height = window.innerHeight
+      // Set width + height on #path viewBox
+      let path = document.querySelector("#pathSVG")
+      console.log("INITPATH", width, height, path)
+      path.setAttribute("viewBox", `0 0 ${width} ${height}`)
+    },
     pathAnimation() {
       var body = document.querySelector("body")
       var path = document.querySelector("#path")
-      var heart = document.querySelector("#heart")
-      gsap.set(heart, {
+      var love = document.querySelector("#love")
+      // console.log(body, path, love)
+      gsap.set(love, {
         xPercent: -50,
         yPercent: -50,
         transformOrigin: "50% 50%"
       })
-      gsap.to(heart, {
-        duration: 10,
+      gsap.to(love, {
         motionPath: {
           path: path,
           align: path
@@ -64,25 +69,28 @@ export default {
   &-Mainlanding
     position: relative
     display: flex
-    // align-items: center
+    justify-content: center
+    align-items: center
     min-height: 100vh
     width: 100%
     .logo
-      margin-top: var(--first-child-top)
-      width: 100%
-      height: calc(6rem * 1.25)
-      background: blue
+      position: fixed
+      left: 0
+      top: 0
       display: flex
       align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
       > div
         width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
       svg
-        height: 100%
+        height: auto
         width: 100%
-        object-fit: contain
-        background: purple
-        height: 5rem
-    .animation
+    .path
       position: fixed
       left: 0
       top: 0
@@ -92,10 +100,14 @@ export default {
       justify-content: center
       align-items: center
       svg
-          width: 100vw
-          height: auto
-    .heart
+          height: 100%
+    .love
+      position: fixed
+      left: 0
+      top: 0
       svg
         height: 39px
         width: auto
+    svg
+      stroke-opacity: 0
 </style>
