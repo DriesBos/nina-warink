@@ -6,17 +6,14 @@
     <div class="logo">
       <div v-html="require('~/assets/images/logo.svg?include')" />
     </div>
-    <div class="animation">
-      <div class="path">
-        <div v-html="require('~/assets/images/path.svg?include')" />
-      </div>
-      <div id="heart" class="heart">
-        <div
-          class="icon"
-          v-html="require('~/assets/images/heart.svg?include')"
-        />
-      </div>
+    <div class="path animation">
+      <div v-html="require('~/assets/images/path.svg?include')" />
     </div>
+    <div
+      id="heart"
+      class="heart icon"
+      v-html="require('~/assets/images/heart.svg?include')"
+    />
   </section>
 </template>
 
@@ -64,29 +61,41 @@ export default {
 
 <style lang="sass">
 .section
-    &-Mainlanding
-        position: relative
-        display: flex
-        align-items: center
-        min-height: 100vh
+  &-Mainlanding
+    position: relative
+    display: flex
+    // align-items: center
+    min-height: 100vh
+    width: 100%
+    .logo
+      margin-top: var(--first-child-top)
+      width: 100%
+      height: calc(6rem * 1.25)
+      background: blue
+      display: flex
+      align-items: center
+      > div
         width: 100%
-        .logo
-            width: 100%
-            height: auto
-        .animation
-            position: fixed
-            left: 0
-            top: 0
-            right: 0
-            bottom: 0
-            display: flex
-            justify-content: center
-            align-items: center
-            svg
-                width: 100vw
-                height: auto
-        .heart
-            svg
-                height: 39px
-                width: auto
+      svg
+        height: 100%
+        width: 100%
+        object-fit: contain
+        background: purple
+        height: 5rem
+    .animation
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+          width: 100vw
+          height: auto
+    .heart
+      svg
+        height: 39px
+        width: auto
 </style>
