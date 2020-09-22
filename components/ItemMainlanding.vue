@@ -38,6 +38,7 @@ export default {
   },
   methods: {
     pathAnimation() {
+      var body = document.querySelector("body")
       var path = document.querySelector("#path")
       var heart = document.querySelector("#heart")
       gsap.set(heart, {
@@ -48,11 +49,17 @@ export default {
       gsap.to(heart, {
         duration: 10,
         motionPath: {
-          path: "#path",
-          align: "#path"
+          path: path,
+          align: path
+        },
+        scrollTrigger: {
+          trigger: body,
+          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          start: "50vh",
+          end: "bottom bottom"
         }
       })
-      console.log("ANIMATION", path)
+      console.log("ANIMATION", path, heart)
     }
   }
 }
