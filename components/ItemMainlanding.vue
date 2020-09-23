@@ -4,26 +4,26 @@
     :class="blok.title_bottom_padding"
   >
     <client-only>
-      <div class="logo-Container_Relative">
+      <div class="logo-Reference">
+        <h1 class="logo-Reference_Item">Nina Warink</h1>
+      </div>
+      <div class="logo-Container logo-Container_Relative">
         <div
           class="logo-Content"
           v-html="require('~/assets/images/logo-text.svg?include')"
         />
       </div>
-      <div class="logo-Container_Fixed">
+      <div class="logo-Container logo-Container_Fixed">
         <div
           class="logo-Content"
           v-html="require('~/assets/images/logo-left.svg?include')"
         />
       </div>
-      <div class="logo-Container_Fixed">
+      <div class="logo-Container logo-Container_Fixed">
         <div
           class="logo-Content"
           v-html="require('~/assets/images/logo-right.svg?include')"
         />
-      </div>
-      <div class="logo-Reference">
-        <h1 class="logo-Reference_Item">Nina Warink</h1>
       </div>
     </client-only>
   </section>
@@ -41,20 +41,20 @@ export default {
     blok: Object
   },
   mounted() {
-    this.initAnimation()
-    this.pathAnimation()
+    setTimeout(this.initAnimation, 250)
+    setTimeout(this.pathAnimation, 275)
   },
   methods: {
     initAnimation() {
       // Get #logo width
-      let referenceWidth = document.querySelector(".logo-Reference_Item")
-        .offsetWidth
-      console.log("INIT ANIMATION", referenceWidth)
+      let reference = document.querySelector(".logo-Reference_Item")
+      let referenceWidth = reference.offsetWidth
       // Get svg's
       let array = document.querySelectorAll(".logo-Content")
       // Replicate width on svg's
       array.forEach(el => {
         el.style.width = referenceWidth + "px"
+        el.style.opacity = 1
       })
     },
     pathAnimation() {
@@ -98,9 +98,11 @@ export default {
     color: white
     z-index: -1
     .logo
+      &-Content
+        opacity: 0
       &-Reference
         position: absolute
-        opacity: 0.1
+        opacity: 0
         pointer-events: none
       &-Container
         &_Relative
