@@ -58,7 +58,7 @@ export default {
       })
     },
     pathAnimation() {
-      var body = document.querySelector("body")
+      // var body = document.querySelector("body")
       var SVGItems = document.querySelectorAll(".SVGItem")
       SVGItems.forEach(el => {
         var path = el.querySelector("#path")
@@ -68,17 +68,17 @@ export default {
           yPercent: -50,
           transformOrigin: "50% 50%"
         })
-        gsap.to(love, {
+        gsap.to(love, 10, {
           motionPath: {
             path: path,
             align: path
-          },
-          scrollTrigger: {
-            trigger: body,
-            scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            start: "50vh",
-            end: "bottom bottom"
           }
+          // scrollTrigger: {
+          //   trigger: body,
+          //   scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          //   start: "50vh",
+          //   end: "bottom bottom"
+          // }
         })
       })
     }
