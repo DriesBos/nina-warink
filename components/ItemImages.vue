@@ -34,55 +34,58 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .subSection
-    &-Images
-        &.none
-            .subSection-Images_Container
-                display: flex
-                align-items: center
-            .subSection-Images_Item
-                margin-right: var(--spacing-two)
-                img
-                    width: 100%
-                &:last-child
-                    margin-right: 0
-        &.screen
-            position: relative
-            height: 100vh
-            width: 100%
-            .subSection-Images_Container
-                position: absolute
-                left: 0
-                top: 0
-                width: 100%
-                height: 100%
-                display: flex
-                align-items: center
-                img
-                    position: absolute
-                    left: 0
-                    top: 0
-                    width: 100%
-                    height: 100%
-                    object-fit: contain
-        &.landscape
-            position: relative
-            height: 0
-            padding-top: 62.5%
-            width: 100%
-            .subSection-Images_Container
-                position: absolute
-                left: 0
-                top: 0
-                width: 100%
-                height: 100%
-                display: flex
-                align-items: center
-                img
-                    position: absolute
-                    left: 0
-                    top: 0
-                    width: 100%
-                    height: 100%
-                    object-fit: contain
+  &-Images
+    &.none
+      .subSection-Images_Container
+        display: flex
+        align-items: center
+        .subSection-Images_Item
+          margin-right: var(--spacing-two)
+          img
+              width: 100%
+          &:last-child
+              margin-right: 0
+
+  &.screen
+    position: relative
+    height: 100vh
+    width: 100%
+    .subSection-Images_Container
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      img
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        object-fit: contain
+  &.landscape
+    position: relative
+    height: 0
+    padding-top: 62.5%
+    width: 100%
+    .subSection-Images_Container
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      img
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        object-fit: contain
 </style>

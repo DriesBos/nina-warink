@@ -66,9 +66,7 @@ main
   align-items: center
 
 .section
-  .subSection
-    opacity: 0
-    transform: translateY(50px)
+
   &-Wrapper
     display: flex
     flex-direction: column
@@ -80,6 +78,10 @@ main
       &:first-child.section-Landing.fullscreen,
       &:first-child.section-Mainlanding
         margin-top: 0
+
+  .subSection
+    opacity: 0
+    transform: translateY(50px)
 
 // Important since overriding interactions
 // .desktop
