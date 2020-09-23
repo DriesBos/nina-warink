@@ -34,7 +34,9 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
 
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
+}
 
 export default {
   props: {
@@ -72,7 +74,8 @@ export default {
           motionPath: {
             path: path,
             align: path
-          }
+          },
+          ease: "none"
           // scrollTrigger: {
           //   trigger: body,
           //   scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
