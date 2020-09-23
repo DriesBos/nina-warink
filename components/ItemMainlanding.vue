@@ -51,8 +51,10 @@ export default {
       let referenceWidth = reference.offsetWidth
       // Get svg's
       let array = document.querySelectorAll(".logo-Content")
+      console.log("ANIMATION INIT VARS", array, referenceWidth)
       // Replicate width on svg's
       array.forEach(el => {
+        console.log("ANIMATION INIT EACH", el)
         el.style.width = referenceWidth + "px"
         el.style.opacity = 1
       })
@@ -60,28 +62,32 @@ export default {
     pathAnimation() {
       var body = document.querySelector("body")
       var SVGItems = document.querySelectorAll(".SVGItem")
+      console.log("ANIMATION PATH VARS", body, SVGItems)
       SVGItems.forEach(el => {
         // var path = el.querySelector("#path")
         var love = el.querySelector("#love")
-        gsap.set(love, {
-          xPercent: -50,
-          yPercent: -50,
-          transformOrigin: "50% 50%"
-        })
-        gsap.to(love, {
-          // motionPath: {
-          //   path: path,
-          //   align: path
-          // },
-          y: "200px",
-          ease: "none",
-          scrollTrigger: {
-            trigger: body,
-            scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            start: "50vh",
-            end: "bottom bottom"
-          }
-        })
+        console.log("ANIMATION PATH EACH", el, love, body)
+        if (love) {
+          gsap.set(love, {
+            xPercent: -50,
+            yPercent: -50,
+            transformOrigin: "50% 50%"
+          })
+          gsap.to(love, {
+            // motionPath: {
+            //   path: path,
+            //   align: path
+            // },
+            y: "200px",
+            ease: "none",
+            scrollTrigger: {
+              trigger: body,
+              scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              start: "50vh",
+              end: "bottom bottom"
+            }
+          })
+        }
       })
     }
   }

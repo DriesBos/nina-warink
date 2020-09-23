@@ -10,7 +10,9 @@ export default {
   methods: {
     lazyLoadComponents() {
       var array = document.querySelectorAll(".subSection")
+      console.log("LAZYLOAD ARRAY", array)
       array.forEach(el => {
+        console.log("LAZYLOAD EL", el)
         let lazyTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: el,
