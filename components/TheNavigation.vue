@@ -2,10 +2,18 @@
   <header>
     <nav>
       <ul>
-        <nuxt-link to="/" tag="li">Home</nuxt-link>
-        <nuxt-link to="/blog" tag="li">Blog</nuxt-link>
-        <nuxt-link to="/samenwerken" tag="li">Samenwerken</nuxt-link>
-        <nuxt-link to="/contact" tag="li">Contact</nuxt-link>
+        <nuxt-link class="nav-Link nav-Link_Home" to="/" tag="li"
+          ><span>Home</span></nuxt-link
+        >
+        <nuxt-link class="nav-Link nav-Link_NonHome" to="/blog" tag="li"
+          ><span>Blog</span></nuxt-link
+        >
+        <nuxt-link class="nav-Link nav-Link_NonHome" to="/samenwerken" tag="li"
+          ><span>Samenwerken</span></nuxt-link
+        >
+        <nuxt-link class="nav-Link nav-Link_NonHome" to="/contact" tag="li"
+          ><span>Contact</span></nuxt-link
+        >
       </ul>
     </nav>
   </header>
@@ -32,17 +40,6 @@ header
     display: flex
     justify-content: flex-end
     li
-      padding-top: 1.25em
+      margin-top: 1.25em
       margin-right: 1.25em
-      cursor: pointer
-    li:last-child
-      padding-right: 0
-    li:first-child
-      &.nuxt-link-exact-active
-        text-decoration: none
-        border-bottom: $border
-    li:nth-child(n+2)
-      &.nuxt-link-active
-        text-decoration: none
-        border-bottom: $border
 </style>

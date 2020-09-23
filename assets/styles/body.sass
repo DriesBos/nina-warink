@@ -1,8 +1,46 @@
 @import '~/assets/styles/variables.sass'
 
 // PARTICULARS
-.link
-  cursor:
+footer, header
+  --var: 0%
+  .nav-Link
+    span
+      position: relative
+      line-height: 2
+      cursor: pointer
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        display: inline-block
+        bottom: 0
+        top: 0
+        width: var(--var)
+        z-index: 0
+        border-bottom: $border
+    &:hover
+      span
+        &::before
+          @media ( hover: hover )
+            animation: hyperLink .33s ease
+            animation-iteration-count: 1
+            animation-fill-mode: both
+  .nav-Link_NonHome
+    &.nuxt-link-active
+      span
+        &::before
+          @media ( hover: hover )
+            animation: hyperLink .33s ease
+            animation-iteration-count: 1
+            animation-fill-mode: both
+  .nav-Link_Home
+    &.nuxt-link-exact-active
+      span
+        &::before
+          @media ( hover: hover )
+            animation: hyperLink .33s ease
+            animation-iteration-count: 1
+            animation-fill-mode: both
 
 body
   position: relative

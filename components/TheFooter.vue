@@ -1,39 +1,44 @@
 <template>
   <footer class="footer">
     <ul>
-      <li>
-        <nuxt-link class="footer-Link nonActive" to="/">Nina Warink</nuxt-link>
-      </li>
+      <nuxt-link class="nav-Link nav-Link_Home" to="/" tag="li"
+        ><span>Nina Warink</span></nuxt-link
+      >
     </ul>
     <ul>
-      <li>
-        <nuxt-link class="footer-Link" to="/">Home</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="footer-Link" to="/blog">Blog</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="footer-Link" to="/samenwerken">Samenwerken</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="footer-Link" to="/contact">Contact</nuxt-link>
-      </li>
+      <nuxt-link class="nav-Link nav-Link_Home" to="/" tag="li"
+        ><span>Home</span></nuxt-link
+      >
+      <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/blog"
+        ><span>Blog</span></nuxt-link
+      >
+      <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/samenwerken"
+        ><span>Samenwerken</span></nuxt-link
+      >
+      <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/contact"
+        ><span>Contact</span></nuxt-link
+      >
     </ul>
     <ul>
+      <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/faq"
+        ><span>FAQ</span></nuxt-link
+      >
+      <nuxt-link
+        class="nav-Link nav-Link_NonHome"
+        tag="li"
+        to="/terms-conditions"
+        ><span>Terms & Conditions</span></nuxt-link
+      >
       <li>
-        <nuxt-link class="footer-Link nonActive" to="/">FAQ</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link class="footer-Link nonActive" to="/"
-          >Terms & Conditions</nuxt-link
-        >
-      </li>
-      <li>
-        <nuxt-link class="footer-Link nonActive" to="/"
-          >Privacy Policy</nuxt-link
+        <nuxt-link
+          class="nav-Link nav-Link_NonHome"
+          tag="li"
+          to="/privacy-policy"
+          ><span>Privacy Policy</span></nuxt-link
         >
       </li>
     </ul>
+
     <ul class="footer-Social">
       <li>
         <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
@@ -77,8 +82,11 @@
   padding-top: var(--spacing-three)
   ul
     flex-basis: 25%
+    margin-right: 1.25em
     a
       text-decoration: none
+  ul:last-child
+    margin-right: 0
   &-Social
     li
       display: flex
@@ -95,13 +103,4 @@
           width: 100%
           height: 100%
           object-fit: contain
-  &-Link
-    &.nuxt-link-exact-active
-      text-decoration: underline
-    &.nonActive.nuxt-link-exact-active
-      text-decoration: none
-      &:hover
-        text-decoration: underline
-    &:hover
-      text-decoration: underline
 </style>
