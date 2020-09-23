@@ -21,8 +21,6 @@ export default {
 <style lang="sass">
 .section
     &-Landing
-        h1
-          background: blue
         &.fullscreen
             display: flex
             align-items: center

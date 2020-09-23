@@ -3,8 +3,26 @@
     class="section section-Mainlanding"
     :class="blok.title_bottom_padding"
   >
-    <div class="logo">
-      <div v-html="require('~/assets/images/logo-new.svg?include')" />
+    <div class="logo-Container_Relative">
+      <div
+        class="logo-Content"
+        v-html="require('~/assets/images/logo-text.svg?include')"
+      />
+    </div>
+    <div class="logo-Container_Fixed">
+      <div
+        class="logo-Content"
+        v-html="require('~/assets/images/logo-left.svg?include')"
+      />
+    </div>
+    <div class="logo-Container_Fixed">
+      <div
+        class="logo-Content"
+        v-html="require('~/assets/images/logo-right.svg?include')"
+      />
+    </div>
+    <div class="logo-Reference">
+      <h1 class="logo-Reference_Item">Nina Warink</h1>
     </div>
   </section>
 </template>
@@ -21,43 +39,45 @@ export default {
     blok: Object
   },
   mounted() {
-    // this.initPath()
+    this.initAnimation()
     this.pathAnimation()
   },
   methods: {
-    initPath() {
+    initAnimation() {
       // Get #logo width
-      let logo = document.querySelector("#logo")
-      let logoRect = logo.getBoundingClientRect()
-      let width = Math.round(logoRect.width)
-      // Get window height
-      let height = window.innerHeight
-      // Set width + height on #path viewBox
-      let path = document.querySelector("#pathSVG")
-      console.log("INITPATH", width, height, path)
-      path.setAttribute("viewBox", `0 0 ${width} ${height}`)
+      let referenceWidth = document.querySelector(".logo-Reference_Item")
+        .offsetWidth
+      console.log("INIT ANIMATION", referenceWidth)
+      // Get svg's
+      let array = document.querySelectorAll(".logo-Content")
+      // Replicate width on svg's
+      array.forEach(el => {
+        el.style.width = referenceWidth + "px"
+      })
     },
     pathAnimation() {
       var body = document.querySelector("body")
-      var path = document.querySelector("#path")
-      var love = document.querySelector("#love")
-      // console.log(body, path, love)
-      gsap.set(love, {
-        xPercent: -50,
-        yPercent: -50,
-        transformOrigin: "50% 50%"
-      })
-      gsap.to(love, {
-        motionPath: {
-          path: path,
-          align: path
-        },
-        scrollTrigger: {
-          trigger: body,
-          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          start: "50vh",
-          end: "bottom bottom"
-        }
+      var SVGItems = document.querySelectorAll(".SVGItem")
+      SVGItems.forEach(el => {
+        var path = el.querySelector("#path")
+        var love = el.querySelector("#love")
+        gsap.set(love, {
+          xPercent: -50,
+          yPercent: -50,
+          transformOrigin: "50% 50%"
+        })
+        gsap.to(love, {
+          motionPath: {
+            path: path,
+            align: path
+          },
+          scrollTrigger: {
+            trigger: body,
+            scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            start: "50vh",
+            end: "bottom bottom"
+          }
+        })
       })
     }
   }
@@ -73,23 +93,43 @@ export default {
     align-items: center
     min-height: 100vh
     width: 100%
+    color: white
+    z-index: -1
     .logo
-      position: fixed
-      left: 0
-      top: 0
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 100%
-      height: 100%
-      > div
-        width: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-      svg
-        height: auto
-        width: 100%
+      &-Reference
+        position: absolute
+        opacity: 0.1
+        pointer-events: none
+      &-Container
+        &_Relative
+          position: relative
+          > div
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+          svg
+            height: auto
+            width: 100%
+        &_Fixed
+          position: fixed
+          left: 0
+          top: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 100%
+          height: 100%
+          padding-left: var(--spacing-sides)
+          padding-right: var(--spacing-sides)
+          > div
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+          svg
+            height: auto
+            width: 100%
     .path
       position: fixed
       left: 0
