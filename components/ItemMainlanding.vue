@@ -34,9 +34,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
 
-if (process.client) {
-  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
-}
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 
 export default {
   props: {
@@ -63,7 +61,7 @@ export default {
       // var body = document.querySelector("body")
       var SVGItems = document.querySelectorAll(".SVGItem")
       SVGItems.forEach(el => {
-        var path = el.querySelector("#path")
+        // var path = el.querySelector("#path")
         var love = el.querySelector("#love")
         gsap.set(love, {
           xPercent: -50,
@@ -71,10 +69,11 @@ export default {
           transformOrigin: "50% 50%"
         })
         gsap.to(love, 10, {
-          motionPath: {
-            path: path,
-            align: path
-          },
+          // motionPath: {
+          //   path: path,
+          //   align: path
+          // },
+          y: "200px",
           ease: "none"
           // scrollTrigger: {
           //   trigger: body,
