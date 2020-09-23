@@ -88,7 +88,10 @@
     display: flex
     justify-content: flex-start
     flex-wrap: wrap
-    flex-grow: 3
+    @media screen and ( min-width: $breakpoint-mobile)
+      flex-grow: 3
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-basis: 50%
     ul
       flex-grow: 1
     @media screen and ( max-width: $breakpoint-mobile)
@@ -98,7 +101,10 @@
         &:last-child
           margin-bottom: 0
   &-Column_Two
-    flex-grow: 1
+    @media screen and ( min-width: $breakpoint-mobile)
+      flex-grow: 1
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-basis: 50%
   ul
     margin-right: 1.25em
   ul:last-child
@@ -107,13 +113,21 @@
     li
       display: flex
       justify-content: flex-end
+      @media screen and ( max-width: $breakpoint-mobile)
+        flex-direction: column
+        align-items: center
+        a
+          padding-top: .165rem
       a
         padding-left: .165rem
         padding-right: .165rem
+        padding-bottom: .165rem
         &:first-child
-          padding-left: 0
+          @media screen and ( min-width: $breakpoint-mobile)
+            padding-left: 0
         &:last-child
-          padding-right: 0
+          @media screen and ( min-width: $breakpoint-mobile)
+            padding-left: 0
       .icon
         position: relative
         width: 1.65rem
