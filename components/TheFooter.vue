@@ -70,7 +70,7 @@
   </footer>
 </template>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .footer
