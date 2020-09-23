@@ -3,27 +3,29 @@
     class="section section-Mainlanding"
     :class="blok.title_bottom_padding"
   >
-    <div class="logo-Container_Relative">
-      <div
-        class="logo-Content"
-        v-html="require('~/assets/images/logo-text.svg?include')"
-      />
-    </div>
-    <div class="logo-Container_Fixed">
-      <div
-        class="logo-Content"
-        v-html="require('~/assets/images/logo-left.svg?include')"
-      />
-    </div>
-    <div class="logo-Container_Fixed">
-      <div
-        class="logo-Content"
-        v-html="require('~/assets/images/logo-right.svg?include')"
-      />
-    </div>
-    <div class="logo-Reference">
-      <h1 class="logo-Reference_Item">Nina Warink</h1>
-    </div>
+    <client-only>
+      <div class="logo-Container_Relative">
+        <div
+          class="logo-Content"
+          v-html="require('~/assets/images/logo-text.svg?include')"
+        />
+      </div>
+      <div class="logo-Container_Fixed">
+        <div
+          class="logo-Content"
+          v-html="require('~/assets/images/logo-left.svg?include')"
+        />
+      </div>
+      <div class="logo-Container_Fixed">
+        <div
+          class="logo-Content"
+          v-html="require('~/assets/images/logo-right.svg?include')"
+        />
+      </div>
+      <div class="logo-Reference">
+        <h1 class="logo-Reference_Item">Nina Warink</h1>
+      </div>
+    </client-only>
   </section>
 </template>
 
