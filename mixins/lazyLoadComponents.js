@@ -21,7 +21,6 @@ export default {
           el,
           {
             opacity: 1,
-            // y: 0,
             duration: 0.33,
             ease: "power2.in"
           },
