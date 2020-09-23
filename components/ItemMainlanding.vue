@@ -14,10 +14,6 @@
         />
       </div>
       <div class="logo-Container logo-Container_Fixed">
-        <!-- <div
-          class="logo-Content"
-          v-html="require('~/assets/images/logo-left.svg?include')"
-        /> -->
         <div class="logo-Content">
           <svg
             class="SVGItem SVGLeft"
@@ -41,10 +37,27 @@
         </div>
       </div>
       <div class="logo-Container logo-Container_Fixed">
-        <div
-          class="logo-Content"
-          v-html="require('~/assets/images/logo-right.svg?include')"
-        />
+        <div class="logo-Content">
+          <svg
+            class="SVGItem SVGRight"
+            viewBox="0 0 1030 580"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="love loveRight"
+              class="love loveRight"
+              d="M804.896 261.755L802.529 258.831C793.616 249.106 787.807 242.573 788.562 235.393C789.178 229.535 794.189 225.477 800.047 226.092C803.259 226.43 806.313 228.279 808.133 230.954C810.47 228.716 813.841 227.542 817.053 227.88C822.911 228.495 826.969 233.507 826.354 239.365C825.599 246.545 818.559 251.728 807.819 259.387L804.896 261.755Z"
+              fill="currentColor"
+            />
+            <path
+              id="path pathRight"
+              class="path pathRight"
+              d="M948.5 288C593.513 278.432 85 345 39.5001 263.5C-5.99985 182 566.193 -17.0486 606.5 202C646.562 419.714 -108 173 67.5001 377.5C243 582 713.499 505.5 900.5 384.5C1087.5 263.5 -44.2535 323.949 197.5 169C399.357 39.6218 807.003 242.722 807.003 242.722"
+              stroke="green"
+            />
+          </svg>
+        </div>
       </div>
     </client-only>
   </section>
@@ -64,6 +77,7 @@ export default {
   mounted() {
     setTimeout(this.initAnimation, 250)
     setTimeout(this.pathAnimationOne, 500)
+    setTimeout(this.pathAnimationTwo, 500)
   },
   methods: {
     initAnimation() {
@@ -104,38 +118,32 @@ export default {
           end: "bottom bottom"
         }
       })
+    },
+    pathAnimationTwo() {
+      var body = document.querySelector("body")
+      var svg = document.querySelector(".SVGRight")
+      var love = document.querySelector(".loveRight")
+      var path = document.querySelector(".pathRight")
+      console.log("ANIMATION ONE", body, svg, love, path)
+      gsap.set(love, {
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "50% 50%"
+      })
+      gsap.to(love, {
+        motionPath: {
+          path: path,
+          align: path
+        },
+        ease: "none",
+        scrollTrigger: {
+          trigger: body,
+          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          start: "50vh",
+          end: "bottom bottom"
+        }
+      })
     }
-    // pathAnimation() {
-    //   var body = document.querySelector("body")
-    //   var SVGItems = document.querySelectorAll(".SVGItem")
-    //   console.log("ANIMATION PATH VARS", body, SVGItems)
-    //   SVGItems.forEach(el => {
-    //     // var path = el.querySelector("#path")
-    //     var love = el.querySelector("#love")
-    //     console.log("ANIMATION PATH EACH", el, love, body)
-    //     if (love) {
-    //       gsap.set(love, {
-    //         xPercent: -50,
-    //         yPercent: -50,
-    //         transformOrigin: "50% 50%"
-    //       })
-    //       gsap.to(love, {
-    //         // motionPath: {
-    //         //   path: path,
-    //         //   align: path
-    //         // },
-    //         y: "200px",
-    //         ease: "none",
-    //         scrollTrigger: {
-    //           trigger: body,
-    //           scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-    //           start: "50vh",
-    //           end: "bottom bottom"
-    //         }
-    //       })
-    //     }
-    //   })
-    // }
   }
 }
 </script>
