@@ -21,6 +21,10 @@ export default {
 <style lang="sass">
 .section
     &-Landing
+      text-align: center
+      h1
+        display: inline
+        text-align: center
         &.fullscreen
             display: flex
             align-items: center

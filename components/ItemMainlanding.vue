@@ -3,63 +3,61 @@
     class="section section-Mainlanding"
     :class="blok.title_bottom_padding"
   >
-    <client-only>
-      <div class="logo-Reference">
-        <h1 class="logo-Reference_Item">Nina Warink</h1>
+    <div class="logo-Reference">
+      <h1 class="logo-Reference_Item">Nina Warink</h1>
+    </div>
+    <div class="logo-Container logo-Container_Relative">
+      <div
+        class="logo-Content"
+        v-html="require('~/assets/images/logo-text.svg?include')"
+      />
+    </div>
+    <div class="logo-Container logo-Container_Fixed">
+      <div class="logo-Content">
+        <svg
+          class="SVGItem SVGLeft"
+          viewBox="0 0 1030 580"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="love loveLeft"
+            class="love loveLeft"
+            d="M157.896 261.755L155.529 258.831C146.616 249.106 140.807 242.573 141.562 235.393C142.178 229.535 147.189 225.477 153.047 226.092C156.259 226.43 159.313 228.279 161.133 230.954C163.47 228.716 166.841 227.542 170.053 227.88C175.911 228.495 179.969 233.507 179.354 239.365C178.599 246.545 171.559 251.728 160.819 259.387L157.896 261.755Z"
+            fill="currentColor"
+          />
+          <path
+            id="path pathLeft"
+            class="path pathLeft"
+            d="M158.94 242.593C-102.825 601.418 895.238 645.169 977.735 275.595C1060.23 -93.9777 127.482 93.1491 473.105 225.591C818.729 358.032 1131.64 240.103 977.735 391.108C823.834 542.113 69.9301 424.54 74.0165 319.6C78.103 214.661 1067.12 -104.292 964.972 236.092C864.787 569.926 95.6154 357.604 95.6154 357.604"
+            stroke="red"
+          />
+        </svg>
       </div>
-      <div class="logo-Container logo-Container_Relative">
-        <div
-          class="logo-Content"
-          v-html="require('~/assets/images/logo-text.svg?include')"
-        />
+    </div>
+    <div class="logo-Container logo-Container_Fixed">
+      <div class="logo-Content">
+        <svg
+          class="SVGItem SVGRight"
+          viewBox="0 0 1030 580"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="love loveRight"
+            class="love loveRight"
+            d="M804.896 261.755L802.529 258.831C793.616 249.106 787.807 242.573 788.562 235.393C789.178 229.535 794.189 225.477 800.047 226.092C803.259 226.43 806.313 228.279 808.133 230.954C810.47 228.716 813.841 227.542 817.053 227.88C822.911 228.495 826.969 233.507 826.354 239.365C825.599 246.545 818.559 251.728 807.819 259.387L804.896 261.755Z"
+            fill="currentColor"
+          />
+          <path
+            id="path pathRight"
+            class="path pathRight"
+            d="M948.5 288C593.513 278.432 85 345 39.5001 263.5C-5.99985 182 566.193 -17.0486 606.5 202C646.562 419.714 -108 173 67.5001 377.5C243 582 713.499 505.5 900.5 384.5C1087.5 263.5 -44.2535 323.949 197.5 169C399.357 39.6218 807.003 242.722 807.003 242.722"
+            stroke="green"
+          />
+        </svg>
       </div>
-      <div class="logo-Container logo-Container_Fixed">
-        <div class="logo-Content">
-          <svg
-            class="SVGItem SVGLeft"
-            viewBox="0 0 1030 580"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              id="love loveLeft"
-              class="love loveLeft"
-              d="M157.896 261.755L155.529 258.831C146.616 249.106 140.807 242.573 141.562 235.393C142.178 229.535 147.189 225.477 153.047 226.092C156.259 226.43 159.313 228.279 161.133 230.954C163.47 228.716 166.841 227.542 170.053 227.88C175.911 228.495 179.969 233.507 179.354 239.365C178.599 246.545 171.559 251.728 160.819 259.387L157.896 261.755Z"
-              fill="currentColor"
-            />
-            <path
-              id="path pathLeft"
-              class="path pathLeft"
-              d="M158.94 242.593C-102.825 601.418 895.238 645.169 977.735 275.595C1060.23 -93.9777 127.482 93.1491 473.105 225.591C818.729 358.032 1131.64 240.103 977.735 391.108C823.834 542.113 69.9301 424.54 74.0165 319.6C78.103 214.661 1067.12 -104.292 964.972 236.092C864.787 569.926 95.6154 357.604 95.6154 357.604"
-              stroke="red"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="logo-Container logo-Container_Fixed">
-        <div class="logo-Content">
-          <svg
-            class="SVGItem SVGRight"
-            viewBox="0 0 1030 580"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              id="love loveRight"
-              class="love loveRight"
-              d="M804.896 261.755L802.529 258.831C793.616 249.106 787.807 242.573 788.562 235.393C789.178 229.535 794.189 225.477 800.047 226.092C803.259 226.43 806.313 228.279 808.133 230.954C810.47 228.716 813.841 227.542 817.053 227.88C822.911 228.495 826.969 233.507 826.354 239.365C825.599 246.545 818.559 251.728 807.819 259.387L804.896 261.755Z"
-              fill="currentColor"
-            />
-            <path
-              id="path pathRight"
-              class="path pathRight"
-              d="M948.5 288C593.513 278.432 85 345 39.5001 263.5C-5.99985 182 566.193 -17.0486 606.5 202C646.562 419.714 -108 173 67.5001 377.5C243 582 713.499 505.5 900.5 384.5C1087.5 263.5 -44.2535 323.949 197.5 169C399.357 39.6218 807.003 242.722 807.003 242.722"
-              stroke="green"
-            />
-          </svg>
-        </div>
-      </div>
-    </client-only>
+    </div>
   </section>
 </template>
 
@@ -78,9 +76,17 @@ export default {
     setTimeout(this.initAnimation, 250)
     setTimeout(this.pathAnimationOne, 500)
     setTimeout(this.pathAnimationTwo, 500)
+    window.addEventListener("resize", this.initAnimation)
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.initAnimation)
   },
   methods: {
+    halloOne() {
+      console.log("YOPPIE")
+    },
     initAnimation() {
+      console.log("YOPPIE")
       // Get #logo width
       let reference = document.querySelector(".logo-Reference_Item")
       let referenceWidth = reference.offsetWidth
@@ -96,10 +102,10 @@ export default {
     },
     pathAnimationOne() {
       var body = document.querySelector("body")
-      var svg = document.querySelector(".SVGLeft")
+      // var svg = document.querySelector(".SVGLeft")
       var love = document.querySelector(".loveLeft")
       var path = document.querySelector(".pathLeft")
-      console.log("ANIMATION ONE", body, svg, love, path)
+      // console.log("ANIMATION ONE", body, svg, love, path)
       gsap.set(love, {
         xPercent: -50,
         yPercent: -50,
@@ -121,10 +127,10 @@ export default {
     },
     pathAnimationTwo() {
       var body = document.querySelector("body")
-      var svg = document.querySelector(".SVGRight")
+      // var svg = document.querySelector(".SVGRight")
       var love = document.querySelector(".loveRight")
       var path = document.querySelector(".pathRight")
-      console.log("ANIMATION ONE", body, svg, love, path)
+      // console.log("ANIMATION ONE", body, svg, love, path)
       gsap.set(love, {
         xPercent: -50,
         yPercent: -50,
@@ -166,6 +172,11 @@ export default {
         position: absolute
         opacity: 0
         pointer-events: none
+        padding-left: var(--spacing-sides)
+        padding-right: var(--spacing-sides)
+        text-align: center
+        h1
+          display: inline
       &-Container
         &_Relative
           position: relative

@@ -21,23 +21,22 @@
         >
       </ul>
       <ul>
-        <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/faq"
-          ><span>FAQ</span></nuxt-link
-        >
+        <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/faq">
+          <span>FAQ</span>
+        </nuxt-link>
         <nuxt-link
           class="nav-Link nav-Link_NonHome"
           tag="li"
           to="/terms-conditions"
-          ><span>Terms & Conditions</span></nuxt-link
         >
-        <li>
-          <nuxt-link
-            class="nav-Link nav-Link_NonHome"
-            tag="li"
-            to="/privacy-policy"
-            ><span>Privacy Policy</span></nuxt-link
-          >
-        </li>
+          <span>Terms & Conditions</span>
+        </nuxt-link>
+        <nuxt-link
+          class="nav-Link nav-Link_NonHome"
+          tag="li"
+          to="/privacy-policy"
+          ><span>Privacy Policy</span>
+        </nuxt-link>
       </ul>
     </div>
     <div class="footer-Column_Two">
