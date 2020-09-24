@@ -272,7 +272,6 @@ export default {
         position: absolute
         opacity: 0
         pointer-events: none
-        text-align: center
         h1
           color: red
           display: inline

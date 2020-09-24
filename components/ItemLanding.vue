@@ -21,16 +21,15 @@ export default {
 <style lang="sass">
 .section
   &-Landing
-    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
     h1
       display: inline
-      text-align: center
     &.fullscreen
-      display: flex
-      align-items: center
       min-height: 100vh
     &.small
-      margin-bottom: var(--spacing-two)
+      margin-bottom: var(--spacing-subsections)
     &.medium
-      margin-bottom: var(--spacing-five)
+      margin-bottom: var(--spacing-sections)
 </style>
