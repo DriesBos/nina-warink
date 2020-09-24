@@ -53,25 +53,30 @@ body
   transition: background-color .33s ease-in
 
 main
+  position: relative
+  width: 100%
   display: flex
   flex-direction: column
   align-items: center
+  padding-left: var(--spacing-sides)
+  padding-right: var(--spacing-sides)
   padding-bottom: var(--spacing-three)
 
 .page
+  position: relative
+  width: 100%
   display: flex
   flex-direction: column
   align-items: center
-  max-width: 100vw
+  // border: 2px solid yellow
 
 .section
   &-Wrapper
+    position: relative
+    width: 100%
     display: flex
     flex-direction: column
     align-items: center
-    max-width: 100vw
-    padding-left: var(--spacing-sides)
-    padding-right: var(--spacing-sides)
     // border: 2px solid purple
     .section
       margin-bottom: var(--spacing-five)
@@ -81,21 +86,23 @@ main
       &:first-child.section-Mainlanding
         margin-top: 0
   &-Content
+    position: relative
+    width: 100%
     display: flex
     flex-direction: column
     align-items: center
-    width: 100%
-    max-width: 100vw
     // border: 2px solid blue
-    &.subSection
-      opacity: 0
-      transform: translateY(50px)
-      margin-bottom: var(--spacing-three)
-      max-width: var(--max-width-content)
-      padding-bottom: var(--spacing-three)
-      // border: 2px solid green
-      &:last-child
-        margin-bottom: 0
+
+.subSection
+  opacity: 0
+  transform: translateY(50px)
+  margin-bottom: var(--spacing-three)
+  width: 100%
+  max-width: var(--max-width-content)
+  margin-bottom: var(--spacing-three)
+  border: 2px solid green
+  &:last-child
+    margin-bottom: 0
 
 // Important since overriding interactions
 // .desktop

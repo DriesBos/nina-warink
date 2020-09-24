@@ -82,12 +82,12 @@
   max-width: $max-content-width
   border-top: $border
   padding-top: var(--spacing-three)
-  padding-left: var(--spacing-sides)
-  padding-right: var(--spacing-sides)
+  // border: 2px solid purple
   &-Column_One
     display: flex
     justify-content: flex-start
     flex-wrap: wrap
+    // border: 2px solid green
     @media screen and ( min-width: $breakpoint-mobile)
       flex-grow: 3
     @media screen and ( max-width: $breakpoint-mobile)
@@ -101,6 +101,7 @@
         &:last-child
           margin-bottom: 0
   &-Column_Two
+    // border: 2px solid blue
     @media screen and ( min-width: $breakpoint-mobile)
       flex-grow: 1
     @media screen and ( max-width: $breakpoint-mobile)
