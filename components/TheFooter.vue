@@ -83,6 +83,8 @@
   border-top: $border
   padding-top: var(--spacing-three)
   // border: 2px solid purple
+  li
+    text-align: left !important
   &-Column_One
     display: flex
     justify-content: flex-start
@@ -131,11 +133,11 @@
             padding-left: 0
       .icon
         position: relative
-        width: 1.65rem
-        height: 1.65rem
         svg
-          position: absolute
-          width: 100%
-          height: 100%
-          object-fit: contain
+          // position: absolute
+          // width: 100%
+          // height: 100%
+          width: 1.65rem
+          height: 1.65rem
+          // object-fit: contain
 </style>
