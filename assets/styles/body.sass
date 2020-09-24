@@ -62,13 +62,16 @@ main
   display: flex
   flex-direction: column
   align-items: center
+  max-width: 100vw
 
 .section
   &-Wrapper
     display: flex
     flex-direction: column
     align-items: center
-    width: calc(100% - (#{var(--spacing-sides)} * 2)
+    max-width: 100vw
+    padding-left: var(--spacing-sides)
+    padding-right: var(--spacing-sides)
     .section
       margin-bottom: var(--spacing-five)
       &:first-child
@@ -77,16 +80,17 @@ main
       &:first-child.section-Mainlanding
         margin-top: 0
   &-Content
-    width: 100%
-    max-width: $max-content-width
     display: flex
     flex-direction: column
     align-items: center
+    max-width: 100vw
 
   .subSection
     opacity: 0
     transform: translateY(50px)
     margin-bottom: var(--spacing-three)
+    max-width: $max-content-width
+    padding-bottom: var(--spacing-three)
     &:last-child
       margin-bottom: 0
 

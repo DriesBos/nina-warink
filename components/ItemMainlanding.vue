@@ -6,13 +6,67 @@
     <div class="logo-Reference">
       <h1 class="logo-Reference_Item">Nina Warink</h1>
     </div>
-    <div class="logo-Container logo-Container_Relative">
+    <!-- MOBILE -->
+    <div class="logo-Container logo-Mobile logo-Container_Relative">
+      <div
+        class="logo-Content"
+        v-html="require('~/assets/images/logo-text-small.svg?include')"
+      />
+    </div>
+    <div class="logo-Container logo-Mobile logo-Container_Fixed">
+      <div class="logo-Content">
+        <svg
+          class="SVGItem SVGLeft"
+          viewBox="0 0 1030 580"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="love loveLeftSmall"
+            class="love loveLeftSmall"
+            d="M418.775 84.3124L413.666 78.0039C394.434 57.0186 381.899 42.9211 383.528 27.4265C384.856 14.7861 395.671 6.02856 408.311 7.35712C415.243 8.08568 421.832 12.0763 425.76 17.8485C430.803 13.0191 438.077 10.4857 445.009 11.2142C457.649 12.5428 466.407 23.3574 465.078 35.9978C463.45 51.4925 448.258 62.6757 425.083 79.2038L418.775 84.3124Z"
+            fill="currentColor"
+          />
+          <path
+            id="path pathLeftSmall"
+            class="path pathLeftSmall"
+            d="M423.5 42.5C161.735 401.325 895.238 645.169 977.735 275.595C1060.23 -93.9777 127.482 93.1491 473.105 225.591C818.729 358.032 1131.64 240.103 977.735 391.108C823.834 542.113 69.9301 424.54 74.0165 319.6C78.103 214.661 1067.12 -104.292 964.972 236.092C864.787 569.926 95.6154 357.604 95.6154 357.604"
+            stroke="black"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="logo-Container logo-Mobile logo-Container_Fixed">
+      <div class="logo-Content">
+        <svg
+          class="SVGItem SVGRight"
+          viewBox="0 0 1030 580"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="love loveRightSmall"
+            class="love loveRightSmall"
+            d="M646.775 407.312L641.666 401.004C622.434 380.019 609.899 365.921 611.528 350.426C612.856 337.786 623.671 329.029 636.311 330.357C643.243 331.086 649.832 335.076 653.76 340.849C658.803 336.019 666.077 333.486 673.009 334.214C685.649 335.543 694.407 346.357 693.078 358.998C691.45 374.492 676.258 385.676 653.083 402.204L646.775 407.312Z"
+            fill="currentColor"
+          />
+          <path
+            id="path pathRightSmall"
+            class="path pathRightSmall"
+            d="M652 364.5C652 364.5 399.357 39.622 197.5 169C-44.2535 323.949 1087.5 263.5 900.5 384.5C713.499 505.5 243 582 67.5001 377.5C-108 173 646.562 419.714 606.5 202C566.193 -17.0483 -5.99985 182 39.5001 263.5C85 345 297.013 354.932 652 364.5Z"
+            stroke="black"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- DESKTOP -->
+    <div class="logo-Container logo-Desktop logo-Container_Relative">
       <div
         class="logo-Content"
         v-html="require('~/assets/images/logo-text.svg?include')"
       />
     </div>
-    <div class="logo-Container logo-Container_Fixed">
+    <div class="logo-Container logo-Desktop logo-Container_Fixed">
       <div class="logo-Content">
         <svg
           class="SVGItem SVGLeft"
@@ -35,7 +89,7 @@
         </svg>
       </div>
     </div>
-    <div class="logo-Container logo-Container_Fixed">
+    <div class="logo-Container logo-Desktop logo-Container_Fixed">
       <div class="logo-Content">
         <svg
           class="SVGItem SVGRight"
@@ -76,17 +130,15 @@ export default {
     setTimeout(this.initAnimation, 250)
     setTimeout(this.pathAnimationOne, 500)
     setTimeout(this.pathAnimationTwo, 500)
+    setTimeout(this.pathAnimationThree, 500)
+    setTimeout(this.pathAnimationFour, 500)
     window.addEventListener("resize", this.initAnimation)
   },
   destroyed() {
     window.removeEventListener("resize", this.initAnimation)
   },
   methods: {
-    halloOne() {
-      console.log("YOPPIE")
-    },
     initAnimation() {
-      console.log("YOPPIE")
       // Get #logo width
       let reference = document.querySelector(".logo-Reference_Item")
       let referenceWidth = reference.offsetWidth
@@ -102,10 +154,8 @@ export default {
     },
     pathAnimationOne() {
       var body = document.querySelector("body")
-      // var svg = document.querySelector(".SVGLeft")
       var love = document.querySelector(".loveLeft")
       var path = document.querySelector(".pathLeft")
-      // console.log("ANIMATION ONE", body, svg, love, path)
       gsap.set(love, {
         xPercent: -50,
         yPercent: -50,
@@ -127,10 +177,54 @@ export default {
     },
     pathAnimationTwo() {
       var body = document.querySelector("body")
-      // var svg = document.querySelector(".SVGRight")
       var love = document.querySelector(".loveRight")
       var path = document.querySelector(".pathRight")
-      // console.log("ANIMATION ONE", body, svg, love, path)
+      gsap.set(love, {
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "50% 50%"
+      })
+      gsap.to(love, {
+        motionPath: {
+          path: path,
+          align: path
+        },
+        ease: "none",
+        scrollTrigger: {
+          trigger: body,
+          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          start: "50vh",
+          end: "bottom bottom"
+        }
+      })
+    },
+    pathAnimationThree() {
+      var body = document.querySelector("body")
+      var love = document.querySelector(".loveLeftSmall")
+      var path = document.querySelector(".pathLeftSmall")
+      gsap.set(love, {
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "50% 50%"
+      })
+      gsap.to(love, {
+        motionPath: {
+          path: path,
+          align: path
+        },
+        ease: "none",
+        scrollTrigger: {
+          trigger: body,
+          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          start: "50vh",
+          end: "bottom bottom"
+        }
+      })
+    },
+    pathAnimationFour() {
+      var body = document.querySelector("body")
+      var love = document.querySelector(".loveRightSmall")
+      var path = document.querySelector(".pathRightSmall")
       gsap.set(love, {
         xPercent: -50,
         yPercent: -50,
@@ -155,6 +249,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .section
   &-Mainlanding
     position: relative
@@ -170,10 +266,9 @@ export default {
     .logo
       &-Content
         opacity: 0
-        border: 1px solid green
       &-Reference
         position: absolute
-        opacity: 0.5
+        opacity: 0
         pointer-events: none
         text-align: center
         h1
@@ -209,6 +304,12 @@ export default {
           svg
             height: auto
             width: 100%
+      &-Desktop
+        @media screen and ( max-width: $breakpoint-mobile)
+          display: none
+      &-Mobile
+        @media screen and ( min-width: $breakpoint-mobile)
+          display: none
     .path
       position: fixed
       left: 0
