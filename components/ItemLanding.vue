@@ -20,17 +20,17 @@ export default {
 
 <style lang="sass">
 .section
-    &-Landing
+  &-Landing
+    text-align: center
+    h1
+      display: inline
       text-align: center
-      h1
-        display: inline
-        text-align: center
-        &.fullscreen
-            display: flex
-            align-items: center
-            min-height: 100vh
-        &.small
-            margin-bottom: var(--spacing-two)
-        &.medium
-            margin-bottom: var(--spacing-five)
+    &.fullscreen
+      display: flex
+      align-items: center
+      min-height: 100vh
+    &.small
+      margin-bottom: var(--spacing-two)
+    &.medium
+      margin-bottom: var(--spacing-five)
 </style>
