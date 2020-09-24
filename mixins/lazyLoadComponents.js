@@ -16,7 +16,7 @@ export default {
         let lazyTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: el,
-            start: "center bottom"
+            start: "top bottom"
           }
         })
         lazyTimeline.to(
