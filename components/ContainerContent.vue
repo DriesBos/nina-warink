@@ -32,19 +32,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-@import '~/assets/styles/variables.sass'
-
-.section
-    &-Content
-      width: 100%
-      max-width: $max-content-width
-      display: flex
-      flex-direction: column
-      align-items: center
-      .subSection
-        margin-bottom: var(--spacing-three)
-        &:last-child
-          margin-bottom: 0
-</style>

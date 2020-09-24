@@ -56,8 +56,6 @@ main
   display: flex
   flex-direction: column
   align-items: center
-  padding-left: var(--spacing-sides)
-  padding-right: var(--spacing-sides)
   padding-bottom: var(--spacing-three)
 
 .page
@@ -66,22 +64,33 @@ main
   align-items: center
 
 .section
-
   &-Wrapper
     display: flex
     flex-direction: column
     align-items: center
+    width: calc(100% - (#{var(--spacing-sides)} * 2)
     .section
       margin-bottom: var(--spacing-five)
+      border: 2px solid purple
       &:first-child
         margin-top: var(--first-child-top)
       &:first-child.section-Landing.fullscreen,
       &:first-child.section-Mainlanding
         margin-top: 0
+  &-Content
+    width: 100%
+    max-width: $max-content-width
+    display: flex
+    flex-direction: column
+    align-items: center
 
   .subSection
+    border: 2px solid green
     opacity: 0
     transform: translateY(50px)
+    margin-bottom: var(--spacing-three)
+    &:last-child
+      margin-bottom: 0
 
 // Important since overriding interactions
 // .desktop

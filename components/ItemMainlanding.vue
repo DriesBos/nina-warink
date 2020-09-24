@@ -165,17 +165,19 @@ export default {
     width: 100%
     color: white
     z-index: -1
+    padding-left: var(--spacing-sides)
+    padding-right: var(--spacing-sides)
     .logo
       &-Content
         opacity: 0
+        border: 1px solid green
       &-Reference
         position: absolute
-        opacity: 0
+        opacity: 0.5
         pointer-events: none
-        padding-left: var(--spacing-sides)
-        padding-right: var(--spacing-sides)
         text-align: center
         h1
+          color: red
           display: inline
       &-Container
         &_Relative
