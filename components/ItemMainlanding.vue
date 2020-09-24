@@ -263,9 +263,11 @@ export default {
     z-index: -1
     padding-left: var(--spacing-sides)
     padding-right: var(--spacing-sides)
+    // border: 2px solid green
     .logo
       &-Content
         opacity: 0
+        //  border: 2px solid blue
       &-Reference
         position: absolute
         opacity: 0
