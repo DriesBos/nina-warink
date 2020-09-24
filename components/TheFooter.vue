@@ -81,8 +81,9 @@
   width: 100%
   max-width: $max-content-width
   border-top: $border
-  padding-top: 60px
   padding-top: var(--spacing-three)
+  padding-left: var(--spacing-sides)
+  padding-right: var(--spacing-sides)
   &-Column_One
     display: flex
     justify-content: flex-start

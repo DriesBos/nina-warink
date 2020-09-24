@@ -48,7 +48,6 @@ export default {
               width: 100%
           &:last-child
               margin-right: 0
-
   &.screen
     position: relative
     height: 100vh

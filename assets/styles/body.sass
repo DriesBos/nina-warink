@@ -72,6 +72,7 @@ main
     max-width: 100vw
     padding-left: var(--spacing-sides)
     padding-right: var(--spacing-sides)
+    // border: 2px solid purple
     .section
       margin-bottom: var(--spacing-five)
       &:first-child
@@ -83,16 +84,18 @@ main
     display: flex
     flex-direction: column
     align-items: center
+    width: 100%
     max-width: 100vw
-
-  .subSection
-    opacity: 0
-    transform: translateY(50px)
-    margin-bottom: var(--spacing-three)
-    max-width: $max-content-width
-    padding-bottom: var(--spacing-three)
-    &:last-child
-      margin-bottom: 0
+    // border: 2px solid blue
+    &.subSection
+      opacity: 0
+      transform: translateY(50px)
+      margin-bottom: var(--spacing-three)
+      max-width: var(--max-width-content)
+      padding-bottom: var(--spacing-three)
+      // border: 2px solid green
+      &:last-child
+        margin-bottom: 0
 
 // Important since overriding interactions
 // .desktop
