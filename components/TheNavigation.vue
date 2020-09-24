@@ -42,4 +42,6 @@ header
     li
       margin-top: 1.25em
       margin-right: 1.25em
+      &:last-child
+        margin-right: 0
 </style>

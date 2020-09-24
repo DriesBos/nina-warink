@@ -267,11 +267,12 @@ export default {
     .logo
       &-Content
         opacity: 0
-        //  border: 2px solid blue
+         border: 2px solid blue
       &-Reference
         position: absolute
-        opacity: 0
+        opacity: 0.5
         pointer-events: none
+        text-align: center
         h1
           color: red
           display: inline

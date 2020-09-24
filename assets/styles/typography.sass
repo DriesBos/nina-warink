@@ -1,3 +1,5 @@
+@import '~/assets/styles/variables.sass'
+
 @font-face
   font-family: 'Shrikhand'
   src: url('~assets/fonts/Shrikhand-Regular.ttf') format('truetype')
@@ -34,13 +36,13 @@ html
   html
     font-size: 22px
 
-h1, h2, h3, p, a
+.title, .subtitle, .textLarge
   word-wrap: break-word
   overflow-wrap: break-word
   word-break: normal
   hyphens: auto
 
-.markdown p // No broken words in regular sized text paragraphs
+.text
   word-wrap: normal
   word-break: normal
   overflow-wrap: normal
@@ -61,6 +63,8 @@ h1
   font-size: 6rem
   line-height: 1.25
   font-family: 'Shrikhand'
+  @media screen and ( max-width: $breakpoint-mobile)
+    font-size: 4.5rem
 
 h2
   font-size: 3rem
@@ -75,10 +79,14 @@ p
   font-size: 6rem
   line-height: 1.25
   font-family: 'Shrikhand'
+  @media screen and ( max-width: $breakpoint-mobile)
+    font-size: 4.5rem
   .markdown p, .markdown p a, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5
     font-size: 6rem
     line-height: 1.25
     font-family: 'Shrikhand'
+    @media screen and ( min-width: $breakpoint-mobile)
+      font-size: 4.5rem
 
 .subtitle
   font-size: 3rem
