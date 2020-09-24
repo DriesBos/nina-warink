@@ -50,6 +50,11 @@ export default {
   },
   mounted() {
     // console.log("PAGE SAMENWERKEN", this.story)
+  },
+  head() {
+    return {
+      title: "Nina Warink — " + this.story.name
+    }
   }
 }
 </script>

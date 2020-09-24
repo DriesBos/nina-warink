@@ -35,6 +35,11 @@ export default {
   },
   mounted() {
     // console.log("SAMENWERKEN INDEX", this.story)
+  },
+  head() {
+    return {
+      title: "Nina Warink — " + this.story.name
+    }
   }
 }
 </script>

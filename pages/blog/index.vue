@@ -35,6 +35,11 @@ export default {
   },
   mounted() {
     // console.log("BLOG INDEX", this.story)
+  },
+  head() {
+    return {
+      title: "Nina Warink — " + this.story.name
+    }
   }
 }
 </script>

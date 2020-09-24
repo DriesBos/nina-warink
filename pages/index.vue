@@ -43,6 +43,11 @@ export default {
     return {
       story: { content: {} }
     }
+  },
+  head() {
+    return {
+      title: "Nina Warink — " + this.story.name
+    }
   }
 }
 </script>

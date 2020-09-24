@@ -16,7 +16,7 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Insert Site Descr" // Change in package.json files
+        content: "✨ NIET GENOTEN, ALTIJD MIS" // Change in package.json files
       },
       {
         name: "mobile-web-app-capable",
