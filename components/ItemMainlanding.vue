@@ -270,7 +270,7 @@ export default {
          border: 2px solid blue
       &-Reference
         position: absolute
-        opacity: 0.5
+        opacity: 0
         pointer-events: none
         text-align: center
         h1
