@@ -42,27 +42,47 @@
     <div class="footer-Column_Two">
       <ul class="footer-Social">
         <li>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+          <a
+            :href="`https://${algemeen[0].content.instagram}`"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div
               class="icon"
+              title="mijn instagram"
               v-html="require('~/assets/images/icon-instagram.svg?include')"
             />
           </a>
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <a
+            :href="`https://${algemeen[0].content.facebook}`"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div
               class="icon"
+              title="mijn facebook"
               v-html="require('~/assets/images/icon-facebook.svg?include')"
             />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
+          <a
+            :href="`https://${algemeen[0].content.twitter}`"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div
               class="icon"
+              title="mijn twitter"
               v-html="require('~/assets/images/icon-twitter.svg?include')"
             />
           </a>
-          <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+          <a
+            :href="`https://${algemeen[0].content.youtube}`"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div
               class="icon"
+              title="mijn youtube"
               v-html="require('~/assets/images/icon-youtube.svg?include')"
             />
           </a>
@@ -71,6 +91,18 @@
     </div>
   </footer>
 </template>
+
+<script>
+import { mapState } from "vuex"
+
+export default {
+  computed: {
+    ...mapState({
+      algemeen: state => state.algemeen.list
+    })
+  }
+}
+</script>
 
 <style lang="sass">
 @import '~/assets/styles/variables.sass'

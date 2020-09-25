@@ -25,16 +25,16 @@ export default {
       let error = getError.data.story
       commit("error/update", error)
 
-      let getGeneral = await app.$storyapi.get("cdn/stories", {
+      let getAlgemeen = await app.$storyapi.get("cdn/stories", {
         version: process.env.NODE_ENV === "production" ? "published" : "draft",
-        starts_with: "general/"
+        starts_with: "algemeen/"
       })
-      let general = getGeneral.data.stories.map(bp => {
+      let algemeen = getAlgemeen.data.stories.map(bp => {
         return {
           content: bp.content
         }
       })
-      commit("general/update", general)
+      commit("algemeen/update", algemeen)
     }
   }
 }

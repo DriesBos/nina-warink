@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex"
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
 import pageLoadFunctions from "@/mixins/pageLoadFunctions"
@@ -35,12 +36,24 @@ export default {
   data() {
     return { story: { content: {} } }
   },
+  computed: {
+    ...mapState({
+      algemeen: state => state.algemeen.list
+    })
+  },
   mounted() {
-    // console.log("SAMENWERKEN INDEX", this.story)
+    console.log("SAMENWERKEN INDEX ALGEMEEN", this.algemeen)
   },
   head() {
     return {
-      title: this.story.name + " — Nina Warink",
+      title: this.story.name + " — " + this.algemeen[0].content.site_titel,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.algemeen[0].content.site_omschrijving
+        }
+      ],
       link: [
         {
           rel: "icon",
