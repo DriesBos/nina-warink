@@ -169,7 +169,7 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 0.5,
           start: "50vh",
           end: "bottom bottom"
         }
@@ -192,7 +192,7 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 0.5,
           start: "50vh",
           end: "bottom bottom"
         }
@@ -215,7 +215,7 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 0.5,
           start: "50vh",
           end: "bottom bottom"
         }
@@ -238,7 +238,7 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          scrub: 0.5,
           start: "50vh",
           end: "bottom bottom"
         }
