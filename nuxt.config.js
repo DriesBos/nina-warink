@@ -130,7 +130,7 @@ module.exports = {
     [
       "@nuxtjs/pwa",
       {
-        icon: false // disables the icon module due dynamic favicon
+        // icon: false // disables the icon module due dynamic favicon
       }
     ],
     [
