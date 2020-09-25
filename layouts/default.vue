@@ -21,12 +21,37 @@ export default {
   watch: {
     $route() {
       this.changeBackground()
+      this.changeFavicon()
     }
   },
   mounted() {
+    this.changeFavicon()
     this.changeBackground()
   },
   methods: {
+    changeFavicon() {
+      console.log(
+        "HIT IT!",
+        this.$route.name,
+        document.querySelector("link[rel*='icon']")
+      )
+      if (this.$route.name === "blog" || this.$route.name === "blog-slug") {
+        document
+          .querySelector("link[rel*='icon']")
+          .setAttribute("href", "favicon-orange.png")
+      } else if (
+        this.$route.name === "samenwerken" ||
+        this.$route.name === "samenwerken-slug"
+      ) {
+        document
+          .querySelector("link[rel*='icon']")
+          .setAttribute("href", "favicon-green.png")
+      } else {
+        document
+          .querySelector("link[rel*='icon']")
+          .setAttribute("href", "favicon-purple.png")
+      }
+    },
     changeBackground() {
       if (this.$route.name === "index") {
         document.body.style.backgroundColor = "#C0C9E5"
