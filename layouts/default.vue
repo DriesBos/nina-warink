@@ -10,48 +10,9 @@
 
 <script>
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
-import dynamicFavicon from "@/mixins/dynamicFavicon"
+import pageLoadFunctions from "@/mixins/pageLoadFunctions"
 
 export default {
-  mixins: [lazyLoadComponents, dynamicFavicon],
-  data() {
-    return {
-      backgroundColor: 0
-    }
-  },
-  watch: {
-    $route() {
-      this.changeBackground()
-      this.changeFavicon()
-    }
-  },
-  mounted() {
-    this.changeBackground()
-    this.changeFavicon()
-  },
-  updated() {
-    this.changeFavicon()
-  },
-  methods: {
-    changeBackground() {
-      if (this.$route.name === "index") {
-        document.body.style.backgroundColor = "#C0C9E5"
-      } else if (
-        this.$route.name == "blog" ||
-        this.$route.name == "blog-slug"
-      ) {
-        document.body.style.backgroundColor = "#E4915D"
-      } else if (
-        this.$route.name == "samenwerken" ||
-        this.$route.name == "samenwerken-slug"
-      ) {
-        document.body.style.backgroundColor = "#3D8B74"
-      } else if (this.$route.path == "/contact") {
-        document.body.style.backgroundColor = "#C0C9E5"
-      } else {
-        document.body.style.backgroundColor = "#C0C9E5"
-      }
-    }
-  }
+  mixins: [lazyLoadComponents, pageLoadFunctions]
 }
 </script>
