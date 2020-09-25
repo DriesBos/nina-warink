@@ -30,11 +30,6 @@ export default {
   },
   methods: {
     changeFavicon() {
-      console.log(
-        "HIT IT!",
-        this.$route.name,
-        document.querySelector("link[rel*='icon']")
-      )
       if (this.$route.name === "blog" || this.$route.name === "blog-slug") {
         document
           .querySelector("link[rel*='icon']")
