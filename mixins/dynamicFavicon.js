@@ -1,6 +1,6 @@
 export default {
   mounted() {
-    this.changeFavicon()
+    // this.changeFavicon()
   },
   methods: {
     changeFavicon() {
