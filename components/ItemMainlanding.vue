@@ -127,11 +127,11 @@ export default {
     blok: Object
   },
   mounted() {
-    setTimeout(this.initAnimation, 250)
-    setTimeout(this.pathAnimationOne, 500)
-    setTimeout(this.pathAnimationTwo, 500)
-    setTimeout(this.pathAnimationThree, 500)
-    setTimeout(this.pathAnimationFour, 500)
+    setTimeout(this.initAnimation, 1000)
+    setTimeout(this.pathAnimationOne, 1500)
+    setTimeout(this.pathAnimationTwo, 1500)
+    setTimeout(this.pathAnimationThree, 1500)
+    setTimeout(this.pathAnimationFour, 1500)
     window.addEventListener("resize", this.initAnimation)
   },
   destroyed() {
@@ -261,18 +261,19 @@ export default {
     width: 100%
     color: white
     z-index: -1
-    padding-left: var(--spacing-sides)
-    padding-right: var(--spacing-sides)
     // border: 2px solid green
     .logo
       &-Content
         opacity: 0
-         border: 2px solid blue
+        //  border: 2px solid blue
       &-Reference
         position: absolute
-        opacity: 0
+        opacity: 0.33
         pointer-events: none
         text-align: center
+        @media screen and ( max-width: $breakpoint-mobile)
+          padding-left: var(--spacing-sides)
+          padding-right: var(--spacing-sides)
         h1
           color: red
           display: inline
