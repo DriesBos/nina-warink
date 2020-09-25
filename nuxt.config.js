@@ -127,7 +127,12 @@ module.exports = {
     transpile: ["gsap"]
   },
   buildModules: [
-    "@nuxtjs/pwa",
+    [
+      "@nuxtjs/pwa",
+      {
+        icon: false // disables the icon module due dynamic favicon
+      }
+    ],
     [
       "@aceforth/nuxt-optimized-images",
       {

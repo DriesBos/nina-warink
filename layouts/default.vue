@@ -21,12 +21,15 @@ export default {
   watch: {
     $route() {
       this.changeBackground()
-      this.changeFavicon()
+      setTimeout(this.changeFavicon(), 250)
     }
   },
   mounted() {
-    this.changeFavicon()
     this.changeBackground()
+    setTimeout(this.changeFavicon(), 250)
+  },
+  updated() {
+    setTimeout(this.changeFavicon(), 250)
   },
   methods: {
     changeFavicon() {
