@@ -127,11 +127,11 @@ export default {
     blok: Object
   },
   mounted() {
-    setTimeout(this.initAnimation, 1000)
-    setTimeout(this.pathAnimationOne, 1500)
-    setTimeout(this.pathAnimationTwo, 1500)
-    setTimeout(this.pathAnimationThree, 1500)
-    setTimeout(this.pathAnimationFour, 1500)
+    setTimeout(this.initAnimation, 250)
+    setTimeout(this.pathAnimationOne, 350)
+    setTimeout(this.pathAnimationTwo, 350)
+    setTimeout(this.pathAnimationThree, 350)
+    setTimeout(this.pathAnimationFour, 350)
     window.addEventListener("resize", this.initAnimation)
   },
   destroyed() {
