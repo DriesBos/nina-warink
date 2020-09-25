@@ -68,16 +68,6 @@ export default {
           name: "description",
           content: this.algemeen[0].content.site_omschrijving
         }
-      ],
-      link: [
-        {
-          rel: "icon",
-          type: "image/svg+xml",
-          href: `data:image/svg+xml,
-                <svg viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M541 987.24L472.96 919.2C220.24 695.64 55 544.98 55 360.3C55 209.64 171.64 93 322.3 93C404.92 93 487.54 131.88 541 195.06C594.46 131.88 677.08 93 759.7 93C910.36 93 1027 209.64 1027 360.3C1027 544.98 861.76 695.64 609.04 919.2L541 987.24Z" fill="#E4915D"/>
-                </svg>`
-        }
       ]
     }
   }

@@ -33,6 +33,7 @@ module.exports = {
     ],
     link: [
       {
+        id: "favicon",
         rel: "icon",
         type: "image/png",
         href: "/favicon.png"
