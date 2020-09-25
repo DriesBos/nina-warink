@@ -38,7 +38,7 @@ export default {
   },
   head() {
     return {
-      title: "Nina Warink — " + this.story.name
+      title: this.story.name + " — Nina Warink"
     }
   }
 }
