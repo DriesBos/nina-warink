@@ -268,7 +268,7 @@ export default {
         //  border: 2px solid blue
       &-Reference
         position: absolute
-        opacity: 0.33
+        opacity: 0
         pointer-events: none
         text-align: center
         @media screen and ( max-width: $breakpoint-mobile)
