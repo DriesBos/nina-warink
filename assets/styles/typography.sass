@@ -75,8 +75,6 @@ h2
 p
   font-size: 1rem
 
-.markdown, h1, h2, h3, h4, h5
-
 .title
   font-size: 6rem
   line-height: 1.25
@@ -111,16 +109,22 @@ p
 .text
   font-size: 1rem
   .markdown
-  .markdown p, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5
+  .markdown p, .markdown p a, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5
     font-size: 1rem
     max-width: 36em
     margin-left: auto
     margin-right: auto
+  a, a:link, a:visited, a:hover, a:active
+    font-size: 1rem
+    text-decoration: underline
 
 .textLarge
   font-size: 2rem
-  .markdown p, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5
+  .markdown p, .markdown p a, .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5
     font-size: 2rem
+  a, a:link, a:visited, a:hover, a:active
+    font-size: 2rem
+    text-decoration: underline
 
 a
   color: currentColor
