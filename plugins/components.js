@@ -10,6 +10,7 @@ import ItemTitleSmall from "~/components/ItemTitleSmall.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemTextLarge from "~/components/ItemTextLarge.vue"
 import ItemTextNormal from "~/components/ItemTextNormal.vue"
+import ItemContactForm from "~/components/ItemContactForm.vue"
 
 Vue.component("blok-page", Page)
 Vue.component("blok-post", Post)
@@ -22,3 +23,4 @@ Vue.component("blok-item-title-small", ItemTitleSmall)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text-large", ItemTextLarge)
 Vue.component("blok-item-text-normal", ItemTextNormal)
+Vue.component("blok-item-contact-form", ItemContactForm)
