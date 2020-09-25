@@ -10,10 +10,12 @@
 </template>
 
 <script>
+import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+import dynamicFavicon from "@/mixins/dynamicFavicon"
 
 export default {
-  mixins: [lazyLoadComponents],
+  mixins: [lazyLoadComponents, dynamicFavicon, storyblokLivePreview],
   asyncData(context) {
     // Load the JSON from the API
     return context.app.$storyapi

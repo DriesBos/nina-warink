@@ -10,10 +10,12 @@
 </template>
 
 <script>
+import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+import dynamicFavicon from "@/mixins/dynamicFavicon"
 
 export default {
-  mixins: [lazyLoadComponents],
+  mixins: [storyblokLivePreview, lazyLoadComponents, dynamicFavicon],
   scrollToTop: true,
   asyncData(context) {
     let endpoint = `cdn/stories/blog/${context.params.slug}`

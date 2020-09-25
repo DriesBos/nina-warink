@@ -10,9 +10,10 @@
 
 <script>
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+import dynamicFavicon from "@/mixins/dynamicFavicon"
 
 export default {
-  mixins: [lazyLoadComponents],
+  mixins: [lazyLoadComponents, dynamicFavicon],
   data() {
     return {
       backgroundColor: 0
@@ -21,35 +22,17 @@ export default {
   watch: {
     $route() {
       this.changeBackground()
-      setTimeout(this.changeFavicon(), 250)
+      this.changeFavicon()
     }
   },
   mounted() {
     this.changeBackground()
-    setTimeout(this.changeFavicon(), 250)
+    this.changeFavicon()
   },
   updated() {
-    setTimeout(this.changeFavicon(), 250)
+    this.changeFavicon()
   },
   methods: {
-    changeFavicon() {
-      if (this.$route.name === "blog" || this.$route.name === "blog-slug") {
-        document
-          .querySelector("link[rel*='icon']")
-          .setAttribute("href", "favicon-orange.png")
-      } else if (
-        this.$route.name === "samenwerken" ||
-        this.$route.name === "samenwerken-slug"
-      ) {
-        document
-          .querySelector("link[rel*='icon']")
-          .setAttribute("href", "favicon-green.png")
-      } else {
-        document
-          .querySelector("link[rel*='icon']")
-          .setAttribute("href", "favicon-purple.png")
-      }
-    },
     changeBackground() {
       if (this.$route.name === "index") {
         document.body.style.backgroundColor = "#C0C9E5"

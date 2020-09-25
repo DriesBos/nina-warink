@@ -12,9 +12,10 @@
 <script>
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+import dynamicFavicon from "@/mixins/dynamicFavicon"
 
 export default {
-  mixins: [storyblokLivePreview, lazyLoadComponents],
+  mixins: [storyblokLivePreview, lazyLoadComponents, dynamicFavicon],
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories/home", {
