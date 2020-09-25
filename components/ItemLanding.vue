@@ -26,8 +26,6 @@ export default {
     justify-content: center
     h1
       display: inline
-    &.fullscreen
-      min-height: 100vh
     &.small
       margin-bottom: var(--spacing-subsections)
     &.medium
