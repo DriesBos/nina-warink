@@ -127,11 +127,15 @@ export default {
     blok: Object
   },
   mounted() {
+    const mq = window.matchMedia("(min-width: 840px)")
     setTimeout(this.initAnimation, 250)
-    setTimeout(this.pathAnimationOne, 350)
-    setTimeout(this.pathAnimationTwo, 350)
-    setTimeout(this.pathAnimationThree, 350)
-    setTimeout(this.pathAnimationFour, 350)
+    if (mq.matches) {
+      setTimeout(this.pathAnimationOne, 350)
+      setTimeout(this.pathAnimationTwo, 350)
+    } else {
+      setTimeout(this.pathAnimationThree, 350)
+      setTimeout(this.pathAnimationFour, 350)
+    }
     window.addEventListener("resize", this.initAnimation)
   },
   destroyed() {
