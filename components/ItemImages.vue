@@ -1,6 +1,6 @@
 <template>
   <div class="subSection subSection-Images" :class="applyRatio()">
-    <ul class="images">
+    <ul class="images" :data="blok.images.length">
       <li v-for="(image, i) in blok.images" :key="i" class="images-Item">
         <img :src="image.filename" :alt="image.name" />
       </li>

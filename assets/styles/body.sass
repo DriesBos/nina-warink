@@ -49,13 +49,12 @@ footer, header
 .images
   position: relative
   display: flex
+  flex-wrap: wrap
+  margin-left: var(--gap-images-large)
+  margin-right: var(--gap-images-large)
   &-Item
     padding-left: var(--gap-images-large)
     padding-right: var(--gap-images-large)
-    &:first-child
-      padding-left: 0
-    &:last-child
-      padding-right: 0
   img
     width: 100%
   &[data='1']
