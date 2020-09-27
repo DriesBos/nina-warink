@@ -1,6 +1,6 @@
 <template>
   <div class="subSection subSection-Title title">
-    <markdown-item :input="blok.text" />
+    <markdown :input="blok.text" />
   </div>
 </template>
 
