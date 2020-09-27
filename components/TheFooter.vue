@@ -37,6 +37,14 @@
           to="/privacy-policy"
           ><span>Privacy Policy</span>
         </nuxt-link>
+        <li>&nbsp;</li>
+        <li class="nav-Link nav-Link_NonHome">
+          <span>
+            <a href="https://www.driesbos.com">
+              Site by: Dries Bos
+            </a>
+          </span>
+        </li>
       </ul>
     </div>
     <div class="footer-Column_Two">
