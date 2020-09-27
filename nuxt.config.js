@@ -104,7 +104,8 @@ module.exports = {
               callback(null, routes)
             })
         })
-    }
+    },
+    fallback: true
   },
   /*
    ** Build configuration
