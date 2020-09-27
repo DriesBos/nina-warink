@@ -40,7 +40,12 @@
         <li>&nbsp;</li>
         <li class="nav-Link nav-Link_NonHome">
           <span>
-            <a href="https://www.driesbos.com">
+            <a
+              href="https://www.driesbos.com"
+              target="_blank"
+              title="Site by Dries Bos"
+              rel="noreferrer"
+            >
               Site by: Dries Bos
             </a>
           </span>
