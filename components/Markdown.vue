@@ -37,7 +37,28 @@ export default {
 </script>
 
 <style lang="sass">
-.markdown p
-  white-space: pre-line
-// Prefer style handling by cascading css (typography.sass) as much as possible.
+@import '~/assets/styles/variables.sass'
+
+.markdown
+  p
+    white-space: pre-line
+  a
+    --var: 100%
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      display: inline-block
+      bottom: -3px
+      top: 0
+      width: var(--var)
+      z-index: 0
+      border-bottom: $border
+    // &:hover
+    //   &::before
+    //     @media ( hover: hover )
+    //       animation: hyperLink .33s ease-out
+    //       animation-iteration-count: 1
+    //       animation-fill-mode: both
 </style>
