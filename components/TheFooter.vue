@@ -68,6 +68,17 @@
       <ul class="footer-Social">
         <li>
           <a
+            :href="`https://${algemeen[0].content.youtube}`"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div
+              class="icon"
+              title="mijn youtube"
+              v-html="require('~/assets/images/icon-youtube.svg?include')"
+            />
+          </a>
+          <a
             :href="`https://${algemeen[0].content.instagram}`"
             target="_blank"
             rel="noreferrer"
@@ -79,36 +90,25 @@
             />
           </a>
           <a
-            :href="`https://${algemeen[0].content.facebook}`"
+            :href="`mailto:${algemeen[0].content.email}`"
             target="_blank"
             rel="noreferrer"
           >
             <div
               class="icon"
-              title="mijn facebook"
-              v-html="require('~/assets/images/icon-facebook.svg?include')"
+              title="mailen"
+              v-html="require('~/assets/images/icon-mail.svg?include')"
             />
           </a>
           <a
-            :href="`https://${algemeen[0].content.twitter}`"
+            :href="`tel:${algemeen[0].content.telefoonnr}`"
             target="_blank"
             rel="noreferrer"
           >
             <div
               class="icon"
-              title="mijn twitter"
-              v-html="require('~/assets/images/icon-twitter.svg?include')"
-            />
-          </a>
-          <a
-            :href="`https://${algemeen[0].content.youtube}`"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div
-              class="icon"
-              title="mijn youtube"
-              v-html="require('~/assets/images/icon-youtube.svg?include')"
+              title="bellen"
+              v-html="require('~/assets/images/icon-call.svg?include')"
             />
           </a>
         </li>
@@ -177,11 +177,11 @@ export default {
         flex-direction: column
         align-items: center
         a
-          padding-top: .165rem
+          padding-top: .33rem
       a
-        padding-left: .165rem
-        padding-right: .165rem
-        padding-bottom: .165rem
+        padding-left: .33rem
+        padding-right: .33rem
+        padding-bottom: .33rem
         &:first-child
           @media screen and ( min-width: $breakpoint-mobile)
             padding-left: 0
