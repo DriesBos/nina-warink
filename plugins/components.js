@@ -1,6 +1,8 @@
 import Vue from "vue"
 import Page from "~/components/Page.vue"
-import Post from "~/components/Post.vue"
+import PagePost from "~/components/PagePost.vue"
+import PageBlog from "~/components/PageBlog.vue"
+import PageSamenwerken from "~/components/PageSamenwerken.vue"
 import ContainerContent from "~/components/ContainerContent.vue"
 import ItemLanding from "~/components/ItemLanding.vue"
 import ItemMainlanding from "~/components/ItemMainlanding.vue"
@@ -14,7 +16,9 @@ import ItemTextNormal from "~/components/ItemTextNormal.vue"
 import ItemContactForm from "~/components/ItemContactForm.vue"
 
 Vue.component("blok-page", Page)
-Vue.component("blok-post", Post)
+Vue.component("blok-page-post", PagePost)
+Vue.component("blok-page-blog", PageBlog)
+Vue.component("blok-page-samenwerken", PageSamenwerken)
 Vue.component("blok-container-content", ContainerContent)
 Vue.component("blok-item-images", ItemImages)
 Vue.component("blok-item-instagram", ItemInstagram)

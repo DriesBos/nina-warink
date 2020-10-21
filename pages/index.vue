@@ -11,12 +11,8 @@
 
 <script>
 import { mapState } from "vuex"
-import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-import lazyLoadComponents from "@/mixins/lazyLoadComponents"
-import pageLoadFunctions from "@/mixins/pageLoadFunctions"
 
 export default {
-  mixins: [storyblokLivePreview, lazyLoadComponents, pageLoadFunctions],
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories/home", {
@@ -50,6 +46,9 @@ export default {
     ...mapState({
       algemeen: state => state.algemeen.list
     })
+  },
+  mounted() {
+    console.log("INDEX", this.story)
   },
   head() {
     return {

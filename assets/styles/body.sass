@@ -56,11 +56,15 @@ footer, header
   position: relative
   display: flex
   flex-wrap: wrap
-  margin-left: var(--gap-images-large)
-  margin-right: var(--gap-images-large)
+  // margin-left: var(--gap-images-large)
+  // margin-right: var(--gap-images-large)
   &-Item
     padding-left: var(--gap-images-large)
     padding-right: var(--gap-images-large)
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
   img
     width: 100%
   &[data='1']
@@ -75,6 +79,31 @@ footer, header
   &[data='4']
     .images-Item
       width: 25%
+  &[data='1']
+    .aspectRatioOutside
+      position: relative
+      // overflow: hidden
+      width: 100%
+      &.landscape
+        height: 0
+        padding-top: 56.25% // 16:9
+      .aspectRatioInside
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+      &.none
+        .aspectRatioInside
+          position: relative
+          height: auto
+          img
+            height: auto
+            width: 100%
 
 // Sections
 body
@@ -91,6 +120,7 @@ main
   padding-left: var(--spacing-sides)
   padding-right: var(--spacing-sides)
   padding-bottom: var(--spacing-three)
+  color: $color
 
 .page
   position: relative
@@ -103,6 +133,7 @@ main
   &-Wrapper
     position: relative
     width: 100%
+    min-height: 100vh
     display: flex
     flex-direction: column
     align-items: center
@@ -126,7 +157,6 @@ main
   width: 100%
   max-width: var(--max-width-content)
   margin-bottom: var(--spacing-subsections)
-  // border: 1px solid black
   &:last-child
     margin-bottom: 0
 

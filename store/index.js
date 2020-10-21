@@ -29,6 +29,28 @@ export default {
         }
       })
       commit("algemeen/update", algemeen)
+
+      let getPosts = await app.$storyapi.get("cdn/stories", {
+        version: process.env.NODE_ENV === "production" ? "published" : "draft",
+        starts_with: "blog/"
+      })
+      let posts = getPosts.data.stories.map(bp => {
+        return {
+          content: bp
+        }
+      })
+      commit("posts/update", posts)
+
+      let getSamenwerken = await app.$storyapi.get("cdn/stories", {
+        version: process.env.NODE_ENV === "production" ? "published" : "draft",
+        starts_with: "samenwerken/"
+      })
+      let samenwerken = getSamenwerken.data.stories.map(bp => {
+        return {
+          content: bp
+        }
+      })
+      commit("samenwerken/update", samenwerken)
     }
   }
 }

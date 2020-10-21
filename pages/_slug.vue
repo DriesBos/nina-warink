@@ -11,12 +11,8 @@
 
 <script>
 import { mapState } from "vuex"
-import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-import lazyLoadComponents from "@/mixins/lazyLoadComponents"
-import pageLoadFunctions from "@/mixins/pageLoadFunctions"
 
 export default {
-  mixins: [lazyLoadComponents, pageLoadFunctions, storyblokLivePreview],
   asyncData(context) {
     // Load the JSON from the API
     return context.app.$storyapi
@@ -42,7 +38,7 @@ export default {
     })
   },
   mounted() {
-    console.log("PAGETYPE SLUG", this.general)
+    console.log("INDEX SLUG", this.story)
   },
   head() {
     return {

@@ -1,22 +1,18 @@
 <template>
-  <div v-editable="story.content" class="page-BlogSlug section-Wrapper">
+  <div v-editable="story.content" class="page page-BlogSlug">
     <component
-      :is="blok.component | dashify"
-      v-for="blok in story.content.body"
-      :key="blok._uid"
-      :blok="blok"
+      :is="story.content.component | dashify"
+      v-if="story.content.component"
+      :key="story.content._uid"
+      :blok="story.content"
     ></component>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex"
-import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-import lazyLoadComponents from "@/mixins/lazyLoadComponents"
-import pageLoadFunctions from "@/mixins/pageLoadFunctions"
 
 export default {
-  mixins: [storyblokLivePreview, lazyLoadComponents, pageLoadFunctions],
   scrollToTop: true,
   asyncData(context) {
     let endpoint = `cdn/stories/blog/${context.params.slug}`
@@ -57,7 +53,7 @@ export default {
     })
   },
   mounted() {
-    // console.log("BLOG SLUG", this.story)
+    console.log("BLOG SLUG", this.story)
   },
   head() {
     return {

@@ -31,11 +31,14 @@ export default {
       }
     },
     setFirstSectionMargin() {
-      var wrapper = document.querySelector(".section-Wrapper")
-      var section = wrapper.firstChild
-      var sectionHeight = section.offsetHeight / 2
-      var windowHeight = window.innerHeight / 2
-      section.style.marginTop = windowHeight - sectionHeight + "px"
+      // setTimeout(function() {
+      //   var wrapper = document.querySelector(".section-Wrapper")
+      //   console.log("FIRED", wrapper)
+      //   var section = wrapper.firstChild
+      //   var sectionHeight = section.offsetHeight / 2
+      //   var windowHeight = window.innerHeight / 2
+      //   section.style.marginTop = windowHeight - sectionHeight + "px"
+      // }, 200)
     },
     changeBackground() {
       if (this.$route.name === "index") {

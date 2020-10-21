@@ -1,8 +1,15 @@
 <template>
-  <div class="subSection subSection-Images" :class="applyRatio()">
+  <div class="subSection subSection-Images">
     <ul class="images" :data="blok.images.length">
-      <li v-for="(image, i) in blok.images" :key="i" class="images-Item">
-        <img :src="image.filename" :alt="image.name" />
+      <li
+        v-for="(image, i) in blok.images"
+        :key="i"
+        class="images-Item aspectRatioOutside"
+        :class="[blok.ratio, blok.fill]"
+      >
+        <div class="aspectRatioInside">
+          <img :src="image.filename" :alt="image.name" />
+        </div>
       </li>
     </ul>
   </div>
@@ -14,73 +21,7 @@ export default {
     blok: Object
   },
   mounted() {
-    this.applyRatio()
-    // console.log("ITEM IMAGES", this.blok)
-  },
-  methods: {
-    applyRatio() {
-      if (this.blok.images.length > 1) {
-        return "none"
-      } else {
-        return this.blok.ratio
-      }
-    }
+    console.log(this.blok)
   }
 }
 </script>
-
-<style lang="sass">
-// @import '~/assets/styles/variables.sass'
-
-// .subSection
-//   &-Images
-//     &.none
-//       .subSection-Images_Container
-//         display: flex
-//         align-items: center
-//         .subSection-Images_Item
-//           margin-right: var(--spacing-two)
-//           img
-//               width: 100%
-//           &:last-child
-//               margin-right: 0
-//   &.screen
-//     position: relative
-//     height: 100vh
-//     width: 100%
-//     .subSection-Images_Container
-//       position: absolute
-//       left: 0
-//       top: 0
-//       width: 100%
-//       height: 100%
-//       display: flex
-//       align-items: center
-//       img
-//         position: absolute
-//         left: 0
-//         top: 0
-//         width: 100%
-//         height: 100%
-//         object-fit: contain
-//   &.landscape
-//     position: relative
-//     height: 0
-//     padding-top: 62.5%
-//     width: 100%
-//     .subSection-Images_Container
-//       position: absolute
-//       left: 0
-//       top: 0
-//       width: 100%
-//       height: 100%
-//       display: flex
-//       align-items: center
-//       img
-//         position: absolute
-//         left: 0
-//         top: 0
-//         width: 100%
-//         height: 100%
-//         object-fit: contain
-</style>
