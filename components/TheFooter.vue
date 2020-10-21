@@ -38,7 +38,19 @@
           ><span>Privacy Policy</span>
         </nuxt-link>
         <li>&nbsp;</li>
-        <li class="nav-Link nav-Link_NonHome">
+        <li class="nav-Link nav-Link_NonHome nav-Link_Colophon">
+          <span>
+            <a
+              href="https://www.newkith.com"
+              target="_blank"
+              title="Representation by NewKith"
+              rel="noreferrer"
+            >
+              Representation: NewKith
+            </a>
+          </span>
+        </li>
+        <li class="nav-Link nav-Link_NonHome nav-Link_Colophon">
           <span>
             <a
               href="https://www.driesbos.com"
@@ -46,7 +58,7 @@
               title="Site by Dries Bos"
               rel="noreferrer"
             >
-              Site by: Dries Bos
+              Website: Dries Bos
             </a>
           </span>
         </li>
