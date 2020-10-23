@@ -17,6 +17,8 @@
             tag="li"
             href="https://www.ninawarinkkookboek.nl"
             target="_blank"
+            rel="noreferrer"
+            title="shop"
             ><span>Shop</span></a
           >
         </li>

@@ -22,6 +22,8 @@
             tag="li"
             href="https://www.ninawarinkkookboek.nl"
             target="_blank"
+            rel="noreferrer"
+            title="shop"
             ><span>Shop</span></a
           >
         </li>
@@ -52,7 +54,7 @@
             <a
               href="https://www.newkith.com"
               target="_blank"
-              title="Representation by NewKith"
+              title="representatie door NewKith"
               rel="noreferrer"
             >
               Representatie: NewKith
@@ -64,7 +66,7 @@
             <a
               href="https://www.driesbos.com"
               target="_blank"
-              title="Site by Dries Bos"
+              title="website door Dries Bos"
               rel="noreferrer"
             >
               Website: Dries Bos
@@ -80,6 +82,7 @@
             :href="`https://${algemeen[0].content.youtube}`"
             target="_blank"
             rel="noreferrer"
+            title="mijn youtube"
           >
             <div
               class="icon"
@@ -91,6 +94,7 @@
             :href="`https://${algemeen[0].content.instagram}`"
             target="_blank"
             rel="noreferrer"
+            title="mijn instagram"
           >
             <div
               class="icon"
@@ -102,6 +106,7 @@
             :href="`mailto:${algemeen[0].content.email}`"
             target="_blank"
             rel="noreferrer"
+            title="mailen"
           >
             <div
               class="icon"
@@ -113,6 +118,7 @@
             :href="`tel:${algemeen[0].content.telefoonnr}`"
             target="_blank"
             rel="noreferrer"
+            title="bellen"
           >
             <div
               class="icon"

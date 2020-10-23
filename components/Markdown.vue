@@ -18,7 +18,7 @@ renderer.link = function(href, title, text) {
     href +
     '" title="' +
     title +
-    '">' +
+    '" rel="noreferrer">' +
     text +
     "</a>"
   )
