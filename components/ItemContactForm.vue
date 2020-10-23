@@ -8,9 +8,9 @@
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text" required name="name" placeholder="Je naam" />
-      <input type="text" required name="email" placeholder="Email" />
+      <input class="input" type="hidden" name="form-name" value="contact" style="width: 100%"/>
+      <input class="input"  type="text" required name="name" placeholder="Je naam" style="width: 100%"/>
+      <input class="input"  type="text" required name="email" placeholder="Email" style="width: 100%"/>
       <textarea type="text" required name="message" rows="3" placeholder="Je bericht.." />
       <input type="submit" value="Verstuur!" title="Verstuur bericht"/>
     </form>
@@ -35,6 +35,9 @@ export default {
       display: flex
       flex-direction: column
       align-items: flex-end
+      .input
+        width: calc(100% - 5rem) !important
+        max-width: 100% !important
       input, textarea
         display: block
         margin-bottom: 2.5rem
