@@ -39,6 +39,7 @@ export default {
       flex-direction: column
       align-items: flex-end
       input, textarea
+        display: block
         margin-bottom: 2.5rem
         padding: .5rem 2.5rem
         text-align: left
