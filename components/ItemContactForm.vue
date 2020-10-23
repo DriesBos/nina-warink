@@ -50,11 +50,13 @@ export default {
         border-radius: .1em
       input::placeholder, textarea::placeholder
         color: white
-        width: 100%
+        width: 100% !important
+        max-width: 100% !important
       input::focus, textarea::focus
         color: white
       input[type=text], textarea
         width: calc(100% - 5rem) !important
+        max-width: 100% !important
       input[type=submit]
         transition: all .33s ease-in-out
         cursor: pointer
