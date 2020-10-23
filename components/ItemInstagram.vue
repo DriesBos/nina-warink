@@ -36,6 +36,9 @@ export default {
           )
           this.instafeed = limitedResponse
         })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 }

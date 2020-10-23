@@ -41,16 +41,21 @@ export default {
     getYoutube() {
       let params = {
         part: "snippet",
-        key: "AIzaSyBpBLA3IUv1zr7I7OTW1PoMln6F3a8Hku4",
+        key: "AIzaSyB2J6JRb-SWE87VJGmXN4_C5gkahLT1geY",
         channelId: "UCgZFrXpXCPhRxFZeTOvuPjA",
+        playlistId: "UUgZFrXpXCPhRxFZeTOvuPjA",
         maxResults: 1,
         order: "date",
         type: "video"
       }
       axios
-        .get("https://www.googleapis.com/youtube/v3/search", { params })
+        .get("https://www.googleapis.com/youtube/v3/channels", { params })
         .then(response => {
+          console.log(response.data)
           this.youtubeFeed = response.data.items
+        })
+        .catch(err => {
+          console.log(err)
         })
     }
   }
