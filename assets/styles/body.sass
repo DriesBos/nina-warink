@@ -1,111 +1,10 @@
 @import '~/assets/styles/variables.sass'
 
-// Elements
-footer, header
-  --var: 0%
-  .nav-Link
-    a
-      text-decoration: none
-    span
-      position: relative
-      line-height: 2
-      cursor: pointer
-      &::before
-        content: ''
-        position: absolute
-        left: 0
-        display: inline-block
-        bottom: -3px
-        top: 0
-        width: var(--var)
-        z-index: 0
-        border-bottom: $border
-    &_Colophon
-      opacity: .5
-      transition: opacity $transition-hover
-      &:hover
-        @media ( hover: hover )
-          opacity: 1
-    &:hover
-      span
-        &::before
-          @media ( hover: hover )
-            animation: hyperLink .33s ease-out
-            animation-iteration-count: 1
-            animation-fill-mode: both
-  .nav-Link_NonHome
-    &.nuxt-link-active
-      span
-        &::before
-          @media ( hover: hover )
-            animation: hyperLink .33s ease-out
-            animation-delay: .33s
-            animation-iteration-count: 1
-            animation-fill-mode: both
-  .nav-Link_Home
-    &.nuxt-link-exact-active
-      span
-        &::before
-          @media ( hover: hover )
-            animation: hyperLink .33s ease-out
-            animation-delay: .33s
-            animation-iteration-count: 1
-            animation-fill-mode: both
+// GENERAL
+.cursor
+  cursor: pointer
 
-.images
-  position: relative
-  display: flex
-  flex-wrap: wrap
-  // margin-left: var(--gap-images-large)
-  // margin-right: var(--gap-images-large)
-  &-Item
-    padding-left: var(--gap-images-large)
-    padding-right: var(--gap-images-large)
-    &:first-child
-      padding-left: 0
-    &:last-child
-      padding-right: 0
-  img
-    width: 100%
-  &[data='1']
-    .images-Item
-      width: 100%
-  &[data='2']
-    .images-Item
-      width: 50%
-  &[data='3']
-    .images-Item
-      width: calc(100% / 3)
-  &[data='4']
-    .images-Item
-      width: 25%
-  &[data='1']
-    .aspectRatioOutside
-      position: relative
-      // overflow: hidden
-      width: 100%
-      &.landscape
-        height: 0
-        padding-top: 56.25% // 16:9
-      .aspectRatioInside
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        img
-          width: 100%
-          height: 100%
-          object-fit: contain
-      &.none
-        .aspectRatioInside
-          position: relative
-          height: auto
-          img
-            height: auto
-            width: 100%
-
-// Sections
+// SECTIONS
 body
   position: relative
   background-color: #C0C9E5
@@ -160,20 +59,108 @@ main
   &:last-child
     margin-bottom: 0
 
-// Important since overriding interactions
-// .desktop
-//   display: none
-//   @media screen and ( max-width: $breakpoint-mobile)
-//     display: none !important
-// .mobile
-//   display: none
-//   @media screen and ( max-width: $breakpoint-mobile)
-//     display: block !important
-// .horizontal
-//   display: none
-//   @media screen and (orientation: landscape)
-//     display: block !important
-// .vertical
-//   display: none
-//   @media screen and (orientation: portrait)
-//     display: block !important
+// COMPONENTS
+.images
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  // margin-left: var(--gap-images-large)
+  // margin-right: var(--gap-images-large)
+  &-Item
+    padding-left: var(--gap-images-large)
+    padding-right: var(--gap-images-large)
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+  img
+    width: 100%
+  &[data='1']
+    .images-Item
+      width: 100%
+  &[data='2']
+    .images-Item
+      width: 50%
+  &[data='3']
+    .images-Item
+      width: calc(100% / 3)
+  &[data='4']
+    .images-Item
+      width: 25%
+  &[data='1']
+    .aspectRatioOutside
+      position: relative
+      // overflow: hidden
+      width: 100%
+      &.landscape
+        height: 0
+        padding-top: 56.25% // 16:9
+      .aspectRatioInside
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+      &.none
+        .aspectRatioInside
+          position: relative
+          height: auto
+          img
+            height: auto
+            width: 100%
+
+// HEADER FOOTER
+footer, header
+  --var: 0%
+  .nav-Link
+    a
+      text-decoration: none
+    span
+      position: relative
+      line-height: 2
+      cursor: pointer
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        display: inline-block
+        bottom: -3px
+        top: 0
+        width: var(--var)
+        z-index: 0
+        border-bottom: $border
+    &_Colophon
+      opacity: .5
+      transition: opacity $transition-hover
+      &:hover
+        @media ( hover: hover )
+          opacity: 1
+    &:hover
+      span
+        &::before
+          @media ( hover: hover )
+            animation: hyperLink .33s ease-out
+            animation-iteration-count: 1
+            animation-fill-mode: both
+  .nav-Link_NonHome
+    &.nuxt-link-active
+      span
+        &::before
+          @media ( hover: hover )
+            animation: hyperLink .33s ease-out
+            animation-delay: .33s
+            animation-iteration-count: 1
+            animation-fill-mode: both
+  .nav-Link_Home
+    &.nuxt-link-exact-active
+      span
+        &::before
+          @media ( hover: hover )
+            animation: hyperLink .33s ease-out
+            animation-delay: .33s
+            animation-iteration-count: 1
+            animation-fill-mode: both

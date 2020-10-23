@@ -23,6 +23,7 @@
           <li class="images-Item aspectRatioOutside landscape contain">
             <div class="aspectRatioInside">
               <img
+                class="cursor"
                 :src="item.content.content.thumbnail.filename"
                 :alt="item.content.content.thumbnail.name"
               />
@@ -30,10 +31,10 @@
           </li>
         </ul>
       </div>
-      <div class="subSection subSection-Subtitle subtitle">
+      <div class="subSection subSection-Subtitle subtitle cursor">
         <markdown :input="item.content.name" />
       </div>
-      <div class="subSection subSection-TextLarge textLarge">
+      <div class="subSection subSection-TextLarge textLarge cursor">
         <markdown :input="item.content.content.excerpt" />
       </div>
     </nuxt-link>
