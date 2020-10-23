@@ -22,11 +22,6 @@
         <ul class="images" data="1">
           <li class="images-Item aspectRatioOutside landscape contain">
             <div class="aspectRatioInside">
-              <!-- <img
-                class="cursor"
-                :src="item.content.content.thumbnail.filename"
-                :alt="item.content.content.thumbnail.name"
-              /> -->
               <img
                 v-lazy="
                   `${transformImage(
