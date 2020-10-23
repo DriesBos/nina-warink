@@ -41,7 +41,7 @@ export default {
     getYoutube() {
       let params = {
         part: "snippet",
-        key: process.env.YOUTUBEKEY,
+        key: "AIzaSyBpBLA3IUv1zr7I7OTW1PoMln6F3a8Hku4",
         channelId: "UCgZFrXpXCPhRxFZeTOvuPjA",
         maxResults: 1,
         order: "date",
@@ -50,7 +50,6 @@ export default {
       axios
         .get("https://www.googleapis.com/youtube/v3/search", { params })
         .then(response => {
-          // console.log(response.data.items)
           this.youtubeFeed = response.data.items
         })
     }
