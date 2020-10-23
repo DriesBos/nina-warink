@@ -8,9 +8,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("ITEM TEXTLARGE", this.blok)
   }
 }
 </script>

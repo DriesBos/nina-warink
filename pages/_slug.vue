@@ -37,9 +37,6 @@ export default {
       algemeen: state => state.algemeen.list
     })
   },
-  mounted() {
-    console.log("INDEX SLUG", this.story)
-  },
   head() {
     return {
       title: this.story.name + " — " + this.algemeen[0].content.site_titel,

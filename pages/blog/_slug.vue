@@ -52,9 +52,6 @@ export default {
       algemeen: state => state.algemeen.list
     })
   },
-  mounted() {
-    console.log("BLOG SLUG", this.story)
-  },
   head() {
     return {
       title: this.story.name + " — " + this.algemeen[0].content.site_titel,

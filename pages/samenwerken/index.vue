@@ -39,9 +39,6 @@ export default {
       algemeen: state => state.algemeen.list
     })
   },
-  mounted() {
-    console.log("SAMENWERKEN INDEX", this.story)
-  },
   head() {
     return {
       title: this.story.name + " — " + this.algemeen[0].content.site_titel,

@@ -18,9 +18,6 @@ export default {
   mixins: [storyblokLivePreview, lazyLoadComponents, pageLoadFunctions],
   props: {
     blok: Object
-  },
-  mounted() {
-    console.log("PAGETYPE PAGE", this.blok)
   }
 }
 </script>

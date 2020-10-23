@@ -26,9 +26,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("CONTAINER CONTENT", this.blok)
   }
 }
 </script>
