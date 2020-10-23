@@ -36,7 +36,7 @@ export default {
   },
   created() {
     this.getYoutube()
-  }
+  },
   methods: {
     getYoutube() {
       let params = {
