@@ -1,5 +1,5 @@
 const axios = require("axios")
-require("dotenv").config()
+// require("dotenv").config()
 
 module.exports = {
   /*
@@ -39,6 +39,11 @@ module.exports = {
         href: "/favicon.png"
       }
     ]
+  },
+
+  privateRuntimeConfig: {
+    ySecret: process.env.YOUTUBEKEY,
+    iSecret: process.env.INSTAGRAMKEY
   },
 
   loading: false,

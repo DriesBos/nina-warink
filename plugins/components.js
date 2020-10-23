@@ -8,6 +8,7 @@ import ItemLanding from "~/components/ItemLanding.vue"
 import ItemMainlanding from "~/components/ItemMainlanding.vue"
 import ItemImages from "~/components/ItemImages.vue"
 import ItemInstagram from "~/components/ItemInstagram.vue"
+import ItemYoutube from "~/components/ItemYoutube.vue"
 import ItemTitle from "~/components/ItemTitle.vue"
 import ItemTitleSmall from "~/components/ItemTitleSmall.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
@@ -22,6 +23,7 @@ Vue.component("blok-page-samenwerken", PageSamenwerken)
 Vue.component("blok-container-content", ContainerContent)
 Vue.component("blok-item-images", ItemImages)
 Vue.component("blok-item-instagram", ItemInstagram)
+Vue.component("blok-item-youtube", ItemYoutube)
 Vue.component("blok-item-landing", ItemLanding)
 Vue.component("blok-item-mainlanding", ItemMainlanding)
 Vue.component("blok-item-title", ItemTitle)

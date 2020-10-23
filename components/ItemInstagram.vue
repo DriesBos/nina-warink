@@ -20,15 +20,15 @@ export default {
       instafeed: null
     }
   },
-  created() {},
-  mounted() {
+  created() {
     this.getInsta()
   },
   methods: {
     getInsta() {
+      var token = process.env.INSTAGRAMKEY
       axios
         .get(
-          "https://graph.instagram.com/me/media?fields=id,media_type,media_url,username&access_token=IGQVJYemhrc2lVSUc0YmdNdS1WVGNqZA2NrRThsSW9jSkVuUV9IcWUyUk9wRGlMRkVSS2kzSTdoOVpGdHFsT3hraFpUakJaQndTYjM2ZAVo0M1dxNGVTVWNyT0d0VVhYT0FNa0JTbVlhZAklyUzdwcjBNbgZDZD"
+          `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username&access_token=${token}`
         )
         .then(response => {
           var limitedResponse = response.data.data.slice(
