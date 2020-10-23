@@ -11,9 +11,15 @@
         <nuxt-link class="nav-Link nav-Link_NonHome" to="/samenwerken" tag="li"
           ><span>Samenwerken</span></nuxt-link
         >
-        <nuxt-link class="nav-Link nav-Link_NonHome" to="/samenwerken" tag="li"
-          ><span>Shop</span></nuxt-link
-        >
+        <li>
+          <a
+            class="nav-Link nav-Link_NonHome"
+            tag="li"
+            href="https://www.ninawarinkkookboek.nl"
+            target="_blank"
+            ><span>Shop</span></a
+          >
+        </li>
         <nuxt-link class="nav-Link nav-Link_NonHome" to="/contact" tag="li"
           ><span>Contact</span></nuxt-link
         >
