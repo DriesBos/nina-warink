@@ -155,6 +155,7 @@ export default {
     },
     pathAnimationOne() {
       var body = document.querySelector("body")
+      var landing = document.querySelector(".section-Mainlanding")
       var love = document.querySelector(".loveLeft")
       var path = document.querySelector(".pathLeft")
       gsap.set(love, {
@@ -170,14 +171,25 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0.5,
+          scrub: true,
           start: "50vh",
           end: "bottom bottom"
+        }
+      })
+      gsap.to(love, {
+        ease: "none",
+        scale: 2,
+        scrollTrigger: {
+          trigger: landing,
+          scrub: true,
+          start: "bottom center",
+          end: "+=500"
         }
       })
     },
     pathAnimationTwo() {
       var body = document.querySelector("body")
+      var landing = document.querySelector(".section-Mainlanding")
       var love = document.querySelector(".loveRight")
       var path = document.querySelector(".pathRight")
       gsap.set(love, {
@@ -193,14 +205,25 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0.5,
+          scrub: true,
           start: "50vh",
           end: "bottom bottom"
+        }
+      })
+      gsap.to(love, {
+        ease: "none",
+        scale: 2,
+        scrollTrigger: {
+          trigger: landing,
+          scrub: true,
+          start: "bottom center",
+          end: "+=500"
         }
       })
     },
     pathAnimationThree() {
       var body = document.querySelector("body")
+      var landing = document.querySelector(".section-Mainlanding")
       var love = document.querySelector(".loveLeftSmall")
       var path = document.querySelector(".pathLeftSmall")
       gsap.set(love, {
@@ -216,14 +239,25 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0.5,
+          scrub: true,
           start: "50vh",
           end: "bottom bottom"
+        }
+      })
+      gsap.to(love, {
+        ease: "none",
+        scale: 2,
+        scrollTrigger: {
+          trigger: landing,
+          scrub: true,
+          start: "bottom center",
+          end: "+=500"
         }
       })
     },
     pathAnimationFour() {
       var body = document.querySelector("body")
+      var landing = document.querySelector(".section-Mainlanding")
       var love = document.querySelector(".loveRightSmall")
       var path = document.querySelector(".pathRightSmall")
       gsap.set(love, {
@@ -239,9 +273,19 @@ export default {
         ease: "none",
         scrollTrigger: {
           trigger: body,
-          scrub: 0.5,
+          scrub: true,
           start: "50vh",
           end: "bottom bottom"
+        }
+      })
+      gsap.to(love, {
+        ease: "none",
+        scale: 2,
+        scrollTrigger: {
+          trigger: landing,
+          scrub: true,
+          start: "bottom center",
+          end: "+=500"
         }
       })
     }
