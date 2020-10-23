@@ -9,16 +9,10 @@
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <input type="text" required name="name" placeholder="naam" />
-      <input type="text" required name="email" placeholder="email" />
-      <input type="text" required name="message" placeholder="bericht" />
-      <div class="subSection-Contact_Send">
-        <input type="submit" value="verstuur" title="verstuur je bericht!"/>
-        <div
-          class="subSection-Contact_Send_Arrow icon"
-          v-html="require('~/assets/images/contact-arrow.svg?include')"
-        />
-      </div>
+      <input type="text" required name="name" placeholder="Je naam" />
+      <input type="text" required name="email" placeholder="Email" />
+      <textarea type="text" required name="message" rows="3" placeholder="Je bericht.." />
+      <input type="submit" value="Verstuur!" title="Verstuur bericht"/>
     </form>
   </section>
 </template>
@@ -40,31 +34,30 @@ export default {
 .subSection
   &-Contact
     form
+      box-sizing: border-box
       display: flex
       flex-direction: column
-      input
-        margin-bottom: var(--spacing-two)
+      align-items: flex-end
+      input, textarea
+        margin-bottom: 2.5rem
+        padding: .5rem 2.5rem
         text-align: left
-        font-family: 'Avenir Regular',Helvetica, Arial, sans-serif
+        font-family: 'Shrikhand'
         line-height: 1.5
         font-size: 2rem
         color: white
-      input::placeholder
+        border: $border
+        border-radius: .1em
+      input::placeholder, textarea::placeholder
         color: white
-      input::focus
+      input::focus, textarea::focus
         color: white
-      input[type=text]
-        border-bottom: $border
-    &_Send
-      display: flex
-      justify-content: flex-end
-      input
-        margin-bottom: 0 !important
+      input[type=text], textarea
+        width: calc(100% - 5rem)
+      input[type=submit]
+        transition: all .33s ease-in-out
         cursor: pointer
-      &_Arrow
-        width: 5rem
-        height: auto
-        color: white
-        margin-left: 1rem
-        transform: translateY(.66rem)
+        &:hover
+          background: white
+          color: rgb(192, 201, 229)
 </style>

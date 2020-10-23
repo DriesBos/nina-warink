@@ -43,18 +43,19 @@ export default {
   p
     white-space: pre-line
   a
-    --var: 100%
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      left: 0
-      display: inline-block
-      bottom: -3px
-      top: 0
-      width: var(--var)
-      z-index: 0
-      border-bottom: $border
+    text-decoration: underline
+    // --var: 100%
+    // position: relative
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   left: 0
+    //   display: inline-block
+    //   bottom: -3px
+    //   top: 0
+    //   width: var(--var)
+    //   z-index: 0
+    //   border-bottom: $border
     // &:hover
     //   &::before
     //     @media ( hover: hover )

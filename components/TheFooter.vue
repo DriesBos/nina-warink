@@ -46,7 +46,7 @@
               title="Representation by NewKith"
               rel="noreferrer"
             >
-              Representation: NewKith
+              Representatie: NewKith
             </a>
           </span>
         </li>
