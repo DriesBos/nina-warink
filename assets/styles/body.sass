@@ -4,6 +4,12 @@
 .cursor
   cursor: pointer
 
+.lazy
+  opacity: 0
+  transition: opacity $trans-img
+  &[lazy=loaded]
+    opacity: 1
+
 // SECTIONS
 body
   position: relative

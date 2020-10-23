@@ -59,7 +59,11 @@ module.exports = {
     "@/assets/styles/body.sass"
   ],
 
-  plugins: ["~/plugins/components", "~/plugins/filters"],
+  plugins: [
+    "~/plugins/components",
+    "~/plugins/filters",
+    "~/plugins/vue-lazyload"
+  ],
 
   modules: [
     "@nuxtjs/axios",

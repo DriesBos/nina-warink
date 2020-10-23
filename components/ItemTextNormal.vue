@@ -1,6 +1,6 @@
 <template>
   <div class="subSection subSection-TextNormal text">
-    <markdown :input="blok.text" />
+    <LazyMarkdown :input="blok.text" />
   </div>
 </template>
 

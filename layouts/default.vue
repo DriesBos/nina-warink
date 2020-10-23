@@ -1,10 +1,10 @@
 <template>
   <main>
-    <the-navigation />
+    <LazyTheNavigation />
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
-    <the-footer />
+    <LazyTheFooter />
   </main>
 </template>
 
