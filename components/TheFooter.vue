@@ -16,6 +16,9 @@
         <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/samenwerken"
           ><span>Samenwerken</span></nuxt-link
         >
+        <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/samenwerken"
+          ><span>Shop</span></nuxt-link
+        >
         <nuxt-link class="nav-Link nav-Link_NonHome" tag="li" to="/contact"
           ><span>Contact</span></nuxt-link
         >
