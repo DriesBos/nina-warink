@@ -148,10 +148,7 @@ export default {
       let referenceWidth = reference.offsetWidth
       // Get svg's
       let array = document.querySelectorAll(".logo-Content")
-      // console.log("ANIMATION INIT VARS", array, referenceWidth)
-      // Replicate width on svg's
       array.forEach(el => {
-        // console.log("ANIMATION INIT EACH", el)
         el.style.width = referenceWidth + "px"
         el.style.opacity = 1
       })

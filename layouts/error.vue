@@ -22,9 +22,6 @@
 <script>
 export default {
   layout: "default", // you can set a custom layout for the error page
-  mounted() {
-    console.log("ERROR PAGE")
-  },
   head() {
     return {
       title: "Oops! — Deze pagina bestaat niet."
