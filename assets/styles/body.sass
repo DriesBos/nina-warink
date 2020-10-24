@@ -87,30 +87,50 @@ main
   &[data='2']
     .images-Item
       width: 50%
+      @media screen and (max-width: $breakpoint-mobile)
+        width: 100%
+        padding-left: 0
+        padding-right: 0
+        &:first-child
+          margin-bottom: var(--gap-images-large)
   &[data='3']
     .images-Item
       width: calc(100% / 3)
+      @media screen and (max-width: $breakpoint-mobile)
+        width: 100%
+        padding-left: 0
+        padding-right: 0
+        margin-bottom: var(--gap-images-large)
+        &:last-child
+          margin-bottom: 0
   &[data='4']
     .images-Item
       width: 25%
+      @media screen and (max-width: $breakpoint-mobile)
+        width: 50%
+        margin-bottom: var(--gap-images-large)
+        &:nth-last-child(2), &:last-child
+          margin-bottom: 0
   &[data='1']
     .aspectRatioOutside
       position: relative
       // overflow: hidden
       width: 100%
       &.landscape
-        height: 0
-        padding-top: 56.25% // 16:9
+        @media screen and (min-width: $breakpoint-mobile)
+          height: 0
+          padding-top: 56.25% // 16:9
       .aspectRatioInside
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        img
+        @media screen and (min-width: $breakpoint-mobile)
+          position: absolute
+          top: 0
+          left: 0
           width: 100%
           height: 100%
-          object-fit: contain
+          img
+            width: 100%
+            height: 100%
+            object-fit: contain
       &.none
         .aspectRatioInside
           position: relative
