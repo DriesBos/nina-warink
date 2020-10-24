@@ -47,19 +47,22 @@ header
   z-index: 999
   display: flex
   justify-content: center
-  @media screen and ( max-width: 450px)
+  @media screen and ( max-width: 500px)
     nav
       width: 100%
   ul
     display: flex
     justify-content: flex-end
-    @media screen and ( max-width: 450px)
+    @media screen and ( max-width: 500px)
       width: 100%
-      justify-content: space-around
+      justify-content: space-between
+      padding-left: 1.25em
+      padding-right: 1.25em
     li
       margin-top: 1.25em
       margin-right: 1.25em
-      @media screen and ( max-width: 450px)
+      @media screen and ( max-width: 500px)
+        margin-top: 1em
         margin-right: 0
       &:last-child
         margin-right: 0
