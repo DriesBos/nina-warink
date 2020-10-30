@@ -4,6 +4,10 @@ dotenv.config()
 
 module.exports = {
   target: "static",
+  env: {
+    YOUTUBEKEY: process.env.YOUTUBEKEY,
+    INSTAGRAMKEY: process.env.INSTAGRAMKEY
+  },
   /*
    ** Headers of the page
    */
