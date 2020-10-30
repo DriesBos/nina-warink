@@ -4,6 +4,7 @@ dotenv.config()
 
 module.exports = {
   target: "static",
+  // Variables for use in components
   env: {
     YOUTUBEKEY: process.env.YOUTUBEKEY,
     INSTAGRAMKEY: process.env.INSTAGRAMKEY
