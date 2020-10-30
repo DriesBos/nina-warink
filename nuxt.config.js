@@ -127,9 +127,9 @@ module.exports = {
           loader: "eslint-loader",
           exclude: /(node_modules)/
         })
-        config.node = {
-          fs: "empty"
-        }
+      }
+      config.node = {
+        fs: "empty"
       }
     },
     // Transpile GSAP for server side rendering
