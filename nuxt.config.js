@@ -2,6 +2,7 @@ const axios = require("axios")
 require("dotenv").config()
 
 module.exports = {
+  target: "static",
   /*
    ** Headers of the page
    */
