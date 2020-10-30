@@ -41,16 +41,20 @@ export default {
   },
   methods: {
     getYoutube() {
-      let params = {
-        part: "snippet",
-        key: process.env.YOUTUBEKEY,
-        playlistId: "UUgZFrXpXCPhRxFZeTOvuPjA",
-        maxResults: this.blok.show_last
-      }
+      // let params = {
+      //   part: "snippet",
+      //   key: process.env.YOUTUBEKEY,
+      //   playlistId: "UUgZFrXpXCPhRxFZeTOvuPjA",
+      //   maxResults: this.blok.show_last
+      // }
       axios
         .get(
-          "https://cors-anywhere.herokuapp.com/https://www.googleapis.com/youtube/v3/playlistItems",
-          { params }
+          `https://cors-anywhere.herokuapp.com/https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${this.blok.show_last}&playlistId=UUgZFrXpXCPhRxFZeTOvuPjA&key=${process.env.YOUTUBEKEY}`,
+          {
+            headers: {
+              Accept: "application/json"
+            }
+          }
         )
         .then(response => {
           this.youtubeFeed = response.data.items
