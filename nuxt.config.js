@@ -1,5 +1,6 @@
 const axios = require("axios")
-require("dotenv").config()
+import dotenv from "dotenv"
+dotenv.config()
 
 module.exports = {
   target: "static",

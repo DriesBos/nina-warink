@@ -25,7 +25,8 @@
 
 <script>
 import axios from "axios"
-require("dotenv").config()
+import dotenv from "dotenv"
+dotenv.config()
 
 export default {
   props: {
