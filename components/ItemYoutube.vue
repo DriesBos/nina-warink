@@ -1,7 +1,8 @@
 <template>
   <div class="subSection subSection-Youtube">
     <ul class="videos">
-      <li v-for="(video, i) in youtubeFeed" :key="i" class="video-Item">
+      <li class="video-Item">
+        <!-- <li v-for="(video, i) in youtubeFeed" :key="i" class="video-Item"> -->
         <iframe
           id="mediaPlayer"
           allow="autoplay"
@@ -15,7 +16,7 @@
           muted="true"
           playsinline="true"
           title="false"
-          :src="'https://www.youtube.com/embed/' + video.id.videoId"
+          :src="'https://www.youtube.com/embed/Z4RSbkYw7oA'"
         />
       </li>
     </ul>
@@ -50,10 +51,16 @@ export default {
         type: "video"
       }
       axios
-        .get("https://www.googleapis.com/youtube/v3/channels", { params })
+        .get(
+          "https://cors-anywhere.herokuapp.com/https://www.googleapis.com/youtube/v3/playlistItems",
+          { params }
+        )
+        // .get(
+        //   `https://cors-anywhere.herokuapp.com/https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUgZFrXpXCPhRxFZeTOvuPjA&maxResults=1&key=${process.env.YOUTUBEKEY}`
+        // )
         .then(response => {
-          console.log(response.data)
           this.youtubeFeed = response.data.items
+          console.log("RESPONSE", response.data.items)
         })
         .catch(err => {
           console.log(err)
