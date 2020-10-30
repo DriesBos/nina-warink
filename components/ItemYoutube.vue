@@ -23,7 +23,8 @@
 </template>
 
 <script>
-// import axios from "axios"
+import axios from "axios"
+require("dotenv").config()
 
 export default {
   props: {
@@ -39,24 +40,24 @@ export default {
   },
   methods: {
     getYoutube() {
-      // let params = {
-      //   part: "snippet",
-      //   key: "AIzaSyB2J6JRb-SWE87VJGmXN4_C5gkahLT1geY",
-      //   channelId: "UCgZFrXpXCPhRxFZeTOvuPjA",
-      //   playlistId: "UUgZFrXpXCPhRxFZeTOvuPjA",
-      //   maxResults: 1,
-      //   order: "date",
-      //   type: "video"
-      // }
-      // axios
-      //   .get("https://www.googleapis.com/youtube/v3/channels", { params })
-      //   .then(response => {
-      //     console.log(response.data)
-      //     this.youtubeFeed = response.data.items
-      //   })
-      //   .catch(err => {
-      //     console.log(err)
-      //   })
+      let params = {
+        part: "snippet",
+        key: process.env.YOUTUBEKEY,
+        channelId: "UCgZFrXpXCPhRxFZeTOvuPjA",
+        playlistId: "UUgZFrXpXCPhRxFZeTOvuPjA",
+        maxResults: 1,
+        order: "date",
+        type: "video"
+      }
+      axios
+        .get("https://www.googleapis.com/youtube/v3/channels", { params })
+        .then(response => {
+          console.log(response.data)
+          this.youtubeFeed = response.data.items
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 }

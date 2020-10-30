@@ -10,6 +10,7 @@
 
 <script>
 import axios from "axios"
+require("dotenv").config()
 
 export default {
   props: {
@@ -27,7 +28,7 @@ export default {
     getInsta() {
       axios
         .get(
-          "https://graph.instagram.com/me/media?fields=id,media_type,media_url,username&access_token=IGQVJYemhrc2lVSUc0YmdNdS1WVGNqZA2NrRThsSW9jSkVuUV9IcWUyUk9wRGlMRkVSS2kzSTdoOVpGdHFsT3hraFpUakJaQndTYjM2ZAVo0M1dxNGVTVWNyT0d0VVhYT0FNa0JTbVlhZAklyUzdwcjBNbgZDZD"
+          `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username&access_token=${process.env.INSTAGRAMKEY}`
         )
         .then(response => {
           var limitedResponse = response.data.data.slice(

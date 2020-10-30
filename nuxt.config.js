@@ -1,5 +1,5 @@
 const axios = require("axios")
-// require("dotenv").config()
+require("dotenv").config()
 
 module.exports = {
   /*
@@ -39,11 +39,6 @@ module.exports = {
         href: "/favicon.png"
       }
     ]
-  },
-
-  privateRuntimeConfig: {
-    ySecret: process.env.YOUTUBEKEY,
-    iSecret: process.env.INSTAGRAMKEY
   },
 
   loading: false,
@@ -132,16 +127,20 @@ module.exports = {
           loader: "eslint-loader",
           exclude: /(node_modules)/
         })
+        config.node = {
+          fs: "empty"
+        }
       }
     },
     // Transpile GSAP for server side rendering
     transpile: ["gsap"]
   },
   buildModules: [
+    "@nuxtjs/dotenv",
     [
       "@nuxtjs/pwa",
       {
-        // icon: false // disables the icon module due dynamic favicon
+        icon: false // disables the icon module due dynamic favicon
       }
     ],
     [
