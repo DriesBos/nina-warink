@@ -42,10 +42,10 @@ export default {
   },
   methods: {
     getYoutube() {
-      let key = process.env.YOUTUBEKEY
+      // let key = process.env.YOUTUBEKEY
       axios
         .get(
-          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${this.blok.show_last}&playlistId=UUgZFrXpXCPhRxFZeTOvuPjA&key=${key}`,
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${this.blok.show_last}&playlistId=UUgZFrXpXCPhRxFZeTOvuPjA&key=AIzaSyBFtti4Sb08sqP5ODaGSDQ5p_vnkL9bRkA`,
           {
             headers: {
               Accept: "application/json"
