@@ -49,7 +49,7 @@ export default {
       // }
       axios
         .get(
-          "https://cors-anywhere.herokuapp.com/https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=UUgZFrXpXCPhRxFZeTOvuPjA&key=AIzaSyBFtti4Sb08sqP5ODaGSDQ5p_vnkL9bRkA",
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${this.blok.show_last}&playlistId=UUgZFrXpXCPhRxFZeTOvuPjA&key=AIzaSyBFtti4Sb08sqP5ODaGSDQ5p_vnkL9bRkA`,
           {
             headers: {
               Accept: "application/json"
