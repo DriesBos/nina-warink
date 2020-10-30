@@ -1,8 +1,7 @@
 <template>
   <div class="subSection subSection-Youtube">
     <ul class="videos">
-      <li class="video-Item">
-        <!-- <li v-for="(video, i) in youtubeFeed" :key="i" class="video-Item"> -->
+      <li v-for="(video, i) in youtubeFeed" :key="i" class="video-Item">
         <iframe
           id="mediaPlayer"
           allow="autoplay"
@@ -16,7 +15,9 @@
           muted="true"
           playsinline="true"
           title="false"
-          :src="'https://www.youtube.com/embed/Z4RSbkYw7oA'"
+          :src="
+            'https://www.youtube.com/embed/' + video.snippet.resourceId.videoId
+          "
         />
       </li>
     </ul>
@@ -46,7 +47,7 @@ export default {
         key: process.env.YOUTUBEKEY,
         channelId: "UCgZFrXpXCPhRxFZeTOvuPjA",
         playlistId: "UUgZFrXpXCPhRxFZeTOvuPjA",
-        maxResults: 1,
+        maxResults: this.blok.show_last,
         order: "date",
         type: "video"
       }
