@@ -36,7 +36,9 @@ export default {
       })
       let posts = getPosts.data.stories.map(bp => {
         return {
-          content: bp
+          content: bp,
+          published: bp.first_published_at,
+          created: bp.created_at
         }
       })
       commit("posts/update", posts)
@@ -47,7 +49,9 @@ export default {
       })
       let samenwerken = getSamenwerken.data.stories.map(bp => {
         return {
-          content: bp
+          content: bp,
+          published: bp.first_published_at,
+          created: bp.created_at
         }
       })
       commit("samenwerken/update", samenwerken)

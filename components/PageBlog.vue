@@ -96,6 +96,12 @@ export default {
   methods: {
     filterList() {
       this.postsArray = this.posts.slice(1)
+      this.sortByDate(this.postsArray)
+    },
+    sortByDate(values) {
+      values.sort((a, b) =>
+        a.published < b.published ? 1 : b.published < a.published ? -1 : 0
+      )
     },
     transformImage(image, option) {
       if (!image) return ""

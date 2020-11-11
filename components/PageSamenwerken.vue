@@ -4,11 +4,11 @@
       class="section subSection section-Landing title small"
       :class="blok.title_bottom_padding"
     >
-      <h1>{{ blok.title }}</h1>
+      <h1 v-if="blok.title">{{ blok.title }}</h1>
     </section>
     <section v-editable="blok" class="section section-Content">
       <div class="subSection subSection-TextLarge textLarge">
-        <LazyMarkdown :input="blok.text" />
+        <LazyMarkdown v-if="blok.text" :input="blok.text" />
       </div>
     </section>
     <nuxt-link
@@ -18,7 +18,10 @@
       :to="item.content.full_slug"
       tag="section"
     >
-      <div class="subSection subSection-Images">
+      <div
+        v-if="item.content.content.thumbnail.filename"
+        class="subSection subSection-Images"
+      >
         <ul class="images" data="1">
           <li class="images-Item aspectRatioOutside landscape contain">
             <div class="aspectRatioInside">
@@ -60,10 +63,13 @@
         </ul>
       </div>
       <div class="subSection subSection-Subtitle subtitle cursor">
-        <LazyMarkdown :input="item.content.name" />
+        <LazyMarkdown v-if="item.content.name" :input="item.content.name" />
       </div>
       <div class="subSection subSection-TextLarge textLarge cursor">
-        <LazyMarkdown :input="item.content.content.excerpt" />
+        <LazyMarkdown
+          v-if="item.content.content.excerpt"
+          :input="item.content.content.excerpt"
+        />
       </div>
     </nuxt-link>
   </div>
@@ -96,6 +102,12 @@ export default {
   methods: {
     filterList() {
       this.samenwerkenArray = this.samenwerken.slice(1)
+      this.sortByDate(this.samenwerkenArray)
+    },
+    sortByDate(values) {
+      values.sort((a, b) =>
+        a.published < b.published ? 1 : b.published < a.published ? -1 : 0
+      )
     },
     transformImage(image, option) {
       if (!image) return ""
